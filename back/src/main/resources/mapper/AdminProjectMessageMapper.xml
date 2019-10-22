@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.AdminProjectMessageDao">
+
+    <select id="countProjectMessage" resultType="Integer">
+        SELECT count(0)
+        FROM company_not_recruited b
+    </select>
+
+    <resultMap id="AdminProjectMessageMap" type="com.heeexy.example.util.model.One2Many">
+        <result column="projectName" property="projectName"/>
+        <result column="companyName" property="companyName"/>
+        <result column="sutdioName" property="sutdioName"/>
+        <result column="applyNum" property="applyNum"/>
+        <result column="tenderStatus" property="tenderStatus"/>
+    </resultMap>
+
+    <select id="listProjectMessage" resultMap="AdminProjectMessageMap">
+        SELECT
+            b.*
+        FROM (
+                 SELECT
+                     project_name                            projectName,
+                     company_name                            companyName,
+                     studio_name                             studioName,
+                     apply_num                               applyNum,
+                     tender_status                           tenderStatus
+                 FROM company_not_recruited
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) b
+    </select>
+</mapper>

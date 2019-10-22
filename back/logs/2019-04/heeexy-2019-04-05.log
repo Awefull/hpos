@@ -1,0 +1,473 @@
+2019-04-05 09:45:25.479 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22h10s573ms849µs226ns).
+2019-04-05 09:47:08.942 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 09:47:08.943 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: company(String), 123456(String)
+2019-04-05 09:47:08.978 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-04-05 09:47:09.014 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:47:09.015 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String)
+2019-04-05 09:47:09.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-04-05 09:47:09.092 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:47:09.093 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: company(String)
+2019-04-05 09:47:09.109 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-04-05 09:47:11.124 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:47:11.125 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: company(String)
+2019-04-05 09:47:11.139 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 7
+2019-04-05 09:47:11.541 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand 
+2019-04-05 09:47:11.541 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-04-05 09:47:11.579 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8080-exec-8] - 异常
+org.springframework.dao.TransientDataAccessResourceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+### The error may exist in file [D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes\mapper\ClassifyMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             id                                     id,             project_name                           projectName,             project_description                    projectDescription,             demand_type                            demandType,             project_cycle                          projectCycle,             project_budget                         projectBudget,             recruitment_role                       recruitmentRole,             project_demand                         projectDemand,             tender_status                          tenderStatus,             apply_num                              applyNum,             project_type                           projectType,             employer_name                          employerName,             comment_money                          commentMoney,             comment_time                           commentTime,             comment_reliable                       commentReliable,             comment_hard                           commentHard,             file_id                                fileId         FROM demand
+### Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+; Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.; nested exception is com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:110)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy53.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy73.getAllDemand(Unknown Source)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl.getAllDemand(ClassifyServiceImpl.java:26)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$FastClassBySpringCGLIB$$2158b8e3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$EnhancerBySpringCGLIB$$32da3bcd.getAllDemand(<generated>)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$FastClassBySpringCGLIB$$2158b8e3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$EnhancerBySpringCGLIB$$7edd50d.getAllDemand(<generated>)
+	at com.heeexy.example.controller.ClassifyController.getAllDemand(ClassifyController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:107)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy94.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.GeneratedMethodAccessor111.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 94 common frames omitted
+2019-04-05 09:47:11.583 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-8] - Resolved [org.springframework.dao.TransientDataAccessResourceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+### The error may exist in file [D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes\mapper\ClassifyMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             id                                     id,             project_name                           projectName,             project_description                    projectDescription,             demand_type                            demandType,             project_cycle                          projectCycle,             project_budget                         projectBudget,             recruitment_role                       recruitmentRole,             project_demand                         projectDemand,             tender_status                          tenderStatus,             apply_num                              applyNum,             project_type                           projectType,             employer_name                          employerName,             comment_money                          commentMoney,             comment_time                           commentTime,             comment_reliable                       commentReliable,             comment_hard                           commentHard,             file_id                                fileId         FROM demand
+### Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+; Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.; nested exception is com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.]
+2019-04-05 09:48:21.767 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:48:21.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String)
+2019-04-05 09:48:21.786 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 7
+2019-04-05 09:48:42.650 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 23832 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-04-05 09:48:42.665 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-05 09:48:52.949 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 11.527 seconds (JVM running for 15.638)
+2019-04-05 09:49:12.027 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-04-05 09:49:12.395 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-04-05 09:49:12.412 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 09:49:12.471 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: company(String), 123456(String)
+2019-04-05 09:49:12.549 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-04-05 09:49:12.713 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:49:12.717 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String)
+2019-04-05 09:49:12.750 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 7
+2019-04-05 09:49:13.011 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:49:13.012 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: company(String)
+2019-04-05 09:49:13.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-04-05 09:49:15.017 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:49:15.019 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: company(String)
+2019-04-05 09:49:15.039 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 7
+2019-04-05 09:49:15.305 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand 
+2019-04-05 09:49:15.306 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-04-05 09:49:15.465 ERROR --- [GlobalExceptionHandler.java:43][http-nio-8080-exec-6] - 异常
+org.springframework.dao.TransientDataAccessResourceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+### The error may exist in file [D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes\mapper\ClassifyMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             id                                     id,             project_name                           projectName,             project_description                    projectDescription,             demand_type                            demandType,             project_cycle                          projectCycle,             project_budget                         projectBudget,             recruitment_role                       recruitmentRole,             project_demand                         projectDemand,             tender_status                          tenderStatus,             apply_num                              applyNum,             project_type                           projectType,             employer_name                          employerName,             comment_money                          commentMoney,             comment_time                           commentTime,             comment_reliable                       commentReliable,             comment_hard                           commentHard,             file_id                                fileId         FROM demand
+### Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+; Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.; nested exception is com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:110)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy53.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:139)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:76)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy73.getAllDemand(Unknown Source)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl.getAllDemand(ClassifyServiceImpl.java:26)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$FastClassBySpringCGLIB$$2158b8e3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$EnhancerBySpringCGLIB$$9c6a5c5e.getAllDemand(<generated>)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$FastClassBySpringCGLIB$$2158b8e3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.heeexy.example.service.impl.ClassifyServiceImpl$$EnhancerBySpringCGLIB$$717df59e.getAllDemand(<generated>)
+	at com.heeexy.example.controller.ClassifyController.getAllDemand(ClassifyController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:107)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:974)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:391)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy94.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 94 common frames omitted
+2019-04-05 09:49:15.474 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-6] - Resolved [org.springframework.dao.TransientDataAccessResourceException: 
+### Error querying database.  Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+### The error may exist in file [D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes\mapper\ClassifyMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT             id                                     id,             project_name                           projectName,             project_description                    projectDescription,             demand_type                            demandType,             project_cycle                          projectCycle,             project_budget                         projectBudget,             recruitment_role                       recruitmentRole,             project_demand                         projectDemand,             tender_status                          tenderStatus,             apply_num                              applyNum,             project_type                           projectType,             employer_name                          employerName,             comment_money                          commentMoney,             comment_time                           commentTime,             comment_reliable                       commentReliable,             comment_hard                           commentHard,             file_id                                fileId         FROM demand
+### Cause: com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.
+; Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.; nested exception is com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large (1,119 > 1,024). You can change this value on the server by setting the 'max_allowed_packet' variable.]
+2019-04-05 09:58:27.039 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:58:27.041 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: company(String)
+2019-04-05 09:58:27.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 7
+2019-04-05 09:58:37.012 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 09:58:37.014 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: company(String), 123465(String)
+2019-04-05 09:58:37.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 0
+2019-04-05 09:58:39.965 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 09:58:39.966 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String), 123456(String)
+2019-04-05 09:58:39.978 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-04-05 09:58:40.211 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:58:40.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: company(String)
+2019-04-05 09:58:40.238 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 7
+2019-04-05 09:58:40.323 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 09:58:40.324 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String)
+2019-04-05 09:58:40.340 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-05 10:00:13.822 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-04-05 10:00:13.823 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 发猿地(String)
+2019-04-05 10:00:13.851 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-04-05 10:00:13.861 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-04-05 10:00:13.862 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 发猿地(String), 0(Integer), 50(Integer)
+2019-04-05 10:00:13.880 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 2
+2019-04-05 10:00:25.862 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:00:25.864 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String)
+2019-04-05 10:00:25.877 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-04-05 10:00:29.031 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:00:29.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: company(String)
+2019-04-05 10:00:29.047 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 7
+2019-04-05 10:00:29.311 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-5] - Resolved [com.heeexy.example.config.exception.CommonJsonException]
+2019-04-05 10:00:31.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:00:31.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: company(String)
+2019-04-05 10:00:31.434 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 7
+2019-04-05 10:00:31.527 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-7] - Resolved [com.heeexy.example.config.exception.CommonJsonException]
+2019-04-05 10:00:39.444 WARN  --- [AbstractHandlerExceptionResolver.java:194][http-nio-8080-exec-8] - Resolved [com.heeexy.example.config.exception.CommonJsonException]
+2019-04-05 10:03:57.407 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:03:57.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String), 123465(String)
+2019-04-05 10:03:57.424 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 0
+2019-04-05 10:04:00.138 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:04:00.139 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:04:00.153 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-04-05 10:04:00.493 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:04:00.496 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String)
+2019-04-05 10:04:00.538 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 7
+2019-04-05 10:04:00.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:04:00.747 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: company(String)
+2019-04-05 10:04:00.829 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-04-05 10:10:49.770 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:10:49.773 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String), 132465(String)
+2019-04-05 10:10:49.785 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 0
+2019-04-05 10:10:52.632 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:10:52.633 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:10:52.652 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-04-05 10:10:52.877 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:10:52.879 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: company(String)
+2019-04-05 10:10:52.918 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 7
+2019-04-05 10:10:52.988 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:10:52.990 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: company(String)
+2019-04-05 10:10:53.012 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-04-05 10:11:11.097 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-04-05 10:11:11.098 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 发猿地(String)
+2019-04-05 10:11:11.112 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-04-05 10:11:11.114 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-04-05 10:11:11.115 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 发猿地(String), 0(Integer), 50(Integer)
+2019-04-05 10:11:11.188 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 2
+2019-04-05 10:11:32.050 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:11:32.053 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:11:32.065 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-04-05 10:11:32.401 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:11:32.404 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String)
+2019-04-05 10:11:32.420 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-04-05 10:11:32.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:11:32.656 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: company(String)
+2019-04-05 10:11:32.731 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-04-05 10:12:58.132 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:12:58.133 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:12:58.145 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-05 10:12:58.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:12:58.184 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: company(String)
+2019-04-05 10:12:58.199 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 7
+2019-04-05 10:12:58.551 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:12:58.553 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String)
+2019-04-05 10:12:58.565 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-04-05 10:14:55.646 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:14:55.647 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: company(String), 1234653(String)
+2019-04-05 10:14:55.660 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 0
+2019-04-05 10:14:57.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:14:57.843 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:14:57.855 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-04-05 10:14:58.188 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:14:58.189 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: company(String)
+2019-04-05 10:14:58.203 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 7
+2019-04-05 10:14:58.438 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:14:58.439 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: company(String)
+2019-04-05 10:14:58.451 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-04-05 10:18:56.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:18:56.503 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:18:56.516 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-04-05 10:18:56.744 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:18:56.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String)
+2019-04-05 10:18:56.767 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-04-05 10:18:56.857 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:18:56.858 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: company(String)
+2019-04-05 10:18:56.871 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-04-05 10:18:59.273 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:18:59.274 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String)
+2019-04-05 10:18:59.288 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-05 10:19:08.402 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:19:08.403 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123465(String)
+2019-04-05 10:19:08.414 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 0
+2019-04-05 10:19:10.579 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:19:10.581 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String), 123456(String)
+2019-04-05 10:19:10.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-04-05 10:19:10.928 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:19:10.932 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-04-05 10:19:10.954 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-04-05 10:19:11.179 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:19:11.180 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: user(String)
+2019-04-05 10:19:11.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-04-05 10:19:48.985 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:19:48.986 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String)
+2019-04-05 10:19:49.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-04-05 10:20:18.629 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:20:18.630 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String)
+2019-04-05 10:20:18.644 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-04-05 10:20:26.230 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:20:26.232 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String), 123456(String)
+2019-04-05 10:20:26.245 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-04-05 10:20:26.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:20:26.279 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String)
+2019-04-05 10:20:26.293 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-04-05 10:20:26.342 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:20:26.343 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String)
+2019-04-05 10:20:26.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-04-05 10:21:28.000 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.username username, u.password password, u.unit_name unitName FROM account u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-04-05 10:21:28.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-05 10:21:28.013 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-05 10:21:28.339 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.account_id userId, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM account u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:21:28.340 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: company(String)
+2019-04-05 10:21:28.353 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 7
+2019-04-05 10:21:28.687 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:21:28.688 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: company(String)
+2019-04-05 10:21:28.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-04-05 10:21:59.841 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-04-05 10:21:59.842 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 发猿地(String)
+2019-04-05 10:21:59.857 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-04-05 10:21:59.858 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-04-05 10:21:59.859 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 发猿地(String), 0(Integer), 50(Integer)
+2019-04-05 10:21:59.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 2
+2019-04-05 10:22:01.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.* FROM account u WHERE u.username = ? AND u.delete_status = '1' 
+2019-04-05 10:22:01.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: company(String)
+2019-04-05 10:22:01.261 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1

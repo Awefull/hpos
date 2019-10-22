@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.StudioInfoDao">
+
+    <select id="countStudioInfo" resultType="Integer">
+        SELECT count(0)
+        FROM account a
+        WHERE a.delete_status = '1'and a.role_id = '2'
+    </select>
+
+
+    <resultMap id="studioInfoMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="description" property="description"/>
+        <result column="unitName" property="unitName"/>
+        <result column="address" property="address"/>
+        <result column="telephone" property="telephone"/>
+        <result column="evaluate" property="evaluate"/>
+        <result column="finishedProjectNum" property="finishedProjectNum"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+
+    <select id="listStudioInfo" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate                                        evaluate,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum
+                 FROM account
+                 WHERE delete_status = '1' and role_id = '2'
+                 ORDER BY evaluate DESC, account_id ASC
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+
+    <select id="getStudioInfo" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM
+            account a
+        WHERE a.unit_name = #{unitName}
+          AND a.delete_status = '1'
+    </select>
+
+    <select id="filterType" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE project_type = #{projectType}
+    </select>
+
+    <select id="filterStatus" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE tender_status = #{tenderStatus}
+    </select>
+
+    <select id="filterRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE recruitment_role = #{recruitmentRole}
+    </select>
+
+    <select id="filterStatusAndRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE tender_status = #{tenderStatus}
+        AND recruitment_role = #{recruitmentRole}
+    </select>
+
+    <select id="filterTypeAndRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE recruitment_role = #{recruitmentRole}
+        AND project_type = #{projectType}
+    </select>
+
+    <select id="filterTypeAndStatus" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE tender_status = #{tenderStatus}
+        AND project_type = #{projectType}
+    </select>
+
+    <select id="getDemandByProjectName" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            id                                     id,
+            project_name                           projectName,
+            project_description                    projectDescription,
+            demand_type                            demandType,
+            project_cycle                          projectCycle,
+            project_budget                         projectBudget,
+            recruitment_role                       recruitmentRole,
+            project_demand                         projectDemand,
+            tender_status                          tenderStatus,
+            apply_num                              applyNum,
+            project_type                           projectType,
+            employer_name                          employerName,
+            comment_money                          commentMoney,
+            comment_time                           commentTime,
+            comment_reliable                       commentReliable,
+            comment_hard                           commentHard,
+            file_id                                fileId
+        FROM demand
+        WHERE id = #{projectId}
+    </select>
+
+    <insert id="participationProject" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO studio_not_recruited
+           (project_name,deposit, final_payment, company_name, studio_name)
+        VALUES
+            (#{projectName},#{deposit}, #{finalPayment}, #{companyName}, #{studioName})
+    </insert>
+
+    <select id="isAlreadyparticipated" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            *
+        FROM studio_not_recruited
+        WHERE studio_name = #{studioName}
+        AND project_name = #{projectName}
+        AND company_name = #{companyName}
+    </select>
+
+    <select id="filterServePlace" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate                                        evaluate,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace}
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterServePlaceOrderByDemand" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_demand desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterServePlaceOrderByAbility" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_ability desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterServePlaceOrderByPlan" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_plan desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterProjectType" resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate                                        evaluate,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterProjectTypeOrderByDemand" resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_demand desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterProjectTypeOrderByAbility" resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_ability desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterProjectTypeOrderByPlan" resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_plan desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+    </select>
+
+    <select id="filterProjectTypeAndServePlace" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate                                        evaluate,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace}
+                 AND experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="filterProjectTypeAndServePlaceOrderByDemand" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace}
+                 AND experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_demand desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="filterProjectTypeAndServePlaceOrderByAbility" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace}
+                 AND experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_ability desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="filterProjectTypeAndServePlaceOrderByPlan" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE address = #{servePlace}
+                 AND experienced_project_type LIKE #{projectType} AND delete_status = '1' AND role_id = '2'
+                 AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_plan desc, evaluate desc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="getListStudioInfo" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate                                        evaluate,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE delete_status = '1' AND role_id = '2' AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate desc, account_id asc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="getListStudioInfoOrderByDemand" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE delete_status = '1' AND role_id = '2' AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_demand desc, account_id asc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="getListStudioInfoOrderByAbility" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE delete_status = '1' AND role_id = '2' AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_ability desc, account_id asc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+    <select id="getListStudioInfoOrderByPlan" resultType="com.alibaba.fastjson.JSONObject">
+       SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone,
+                     evaluate_demand                                 evaluateDemand,
+                     evaluate_ability                                evaluateAbility,
+                     evaluate_plan                                   evaluatePlan,
+                     finished_project_num                            finishedProjectNum,
+                     experienced_project_type                        experiencedProjectType
+                 FROM account
+                 WHERE delete_status = '1' AND role_id = '2' AND finished_project_num between #{lowData} AND #{heightData}
+                 ORDER BY evaluate_plan desc, account_id asc
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+    </select>
+
+</mapper>

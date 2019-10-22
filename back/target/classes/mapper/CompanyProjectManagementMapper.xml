@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.CompanyProjectManagementDao">
+
+    <insert id="addNotRecruitedProject" useGeneratedKeys="true" keyProperty="unitName">
+        INSERT INTO company_not_recruited
+        (project_name, tender_status, apply_num, delete_status, company_name, deposit, project_description) VALUES
+            (#{projectName}, '0', '0', '1', #{unitName},#{projectBudget}*0.1, #{projectDescription})
+    </insert>
+
+    <select id="countCompanyProjectNotRecruited" resultType="Integer">
+        SELECT count(0)
+        FROM company_not_recruited c
+        WHERE c.delete_status = '1' and company_name = #{companyName}
+    </select>
+
+    <update id="updateNotRecruitedProject">
+        UPDATE company_not_recruited
+        SET
+        studio_name = #{studioName},
+        tender_status = #{tenderStatus},
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and company_name = #{companyName}
+    </update>
+
+    <resultMap id="RecruitedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="studioName" property="studioName"/>
+        <result column="evaluate" property="evaluate"/>
+        <result column="projectName" property="projectname"/>
+    </resultMap>
+    <select id="getRecruiteList" resultMap="RecruitedMap">
+        SELECT
+           snr.studio_name studioName,
+           snr.project_name projectname,
+           a.evaluate
+        FROM (
+          SELECT studio_name,project_name
+          FROM studio_not_recruited
+          WHERE project_name = #{projectName} and company_name = #{companyName}
+        )snr,(
+          SELECT evaluate,unit_name
+          FROM account
+        )a
+        WHERE snr.studio_name = a.unit_name
+        ORDER BY a.evaluate desc
+    </select>
+
+    <select id="getRecruitedList" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           snr.studio_name studioName,
+           snr.project_name projectname,
+           a.evaluate
+        FROM (
+          SELECT studio_name,project_name
+          FROM studio_not_recruited
+          WHERE project_name = #{projectName} and company_name = #{companyName} and bid_status = '3'
+        )snr,(
+          SELECT evaluate,unit_name
+          FROM account
+        )a
+        WHERE snr.studio_name = a.unit_name
+        ORDER BY a.evaluate desc
+    </select>
+
+    <select id="getRecruitedStudio" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           snr.studio_name studioName,
+           snr.project_name projectname,
+           a.evaluate
+        FROM (
+          SELECT studio_name,project_name
+          FROM company_not_recruited
+          WHERE project_name = #{projectName} and company_name = #{companyName}
+        )snr,(
+          SELECT evaluate,unit_name
+          FROM account
+        )a
+        WHERE snr.studio_name = a.unit_name
+    </select>
+
+    <resultMap id="CompanyProjectNotRecruitedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="tenderStatus" property="tenderStatus"/>
+        <result column="deposit" property="deposit"/>
+        <result column="studioName" property="studioName"/>
+        <result column="applyNum" property="applyNum"/>
+        <result column="deleteStatus" property="deleteStatus"/>
+        <result column="projectDescription" property="projectDescription"/>
+    </resultMap>
+    <select id="listCompanyProjectNotRecruited" resultMap="CompanyProjectNotRecruitedMap">
+        SELECT
+        c.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     deposit                                 deposit,
+                     tender_status                           tenderStatus,
+                     studio_name                             studioName,
+                     apply_num                               applyNum,
+                     project_description                     projectDescription
+                 FROM company_not_recruited
+                 WHERE delete_status = '1' and company_name = #{companyName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) c
+        ORDER BY c.id
+    </select>
+
+    <select id="countCompanyProjectProgress" resultType="Integer">
+        SELECT count(0)
+        FROM company_progress co
+        WHERE co.delete_status = '1' and company_name = #{companyName}
+    </select>
+
+    <insert id="addProgressList" useGeneratedKeys="true" keyProperty="companyName">
+        INSERT INTO company_progress
+        (project_name, studio_name, delete_status, company_name, final_payment, project_description) VALUES
+            (#{projectName}, #{studioName}, '1', #{companyName},#{deposit}/0.1*0.9,#{projectDescription})
+    </insert>
+
+    <update id="updateProgressProject">
+        UPDATE company_progress
+        SET
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and company_name = #{companyName}
+    </update>
+
+
+    <update id="updateProgressProjectApplyForPayment">
+        UPDATE company_progress
+        SET
+        apply_for_final_payment = '1'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <update id="update2ProgressProjectApplyForPayment">
+        UPDATE company_progress
+        SET
+        apply_for_final_payment = '0'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <insert id="applyForFinalPayment" useGeneratedKeys="true" keyProperty="companyName">
+        INSERT INTO apply_for_final_payment
+        (project_name, studio_name, company_name) VALUES
+            (#{projectName}, #{studioName}, #{companyName})
+    </insert>
+
+    <select id="getProjectProgressLog" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           pl.date updateDate,
+           pl.progress_log progressLog
+        FROM
+            project_progress_log pl
+        WHERE pl.company_name = #{companyName} and pl.project_name = #{projectName}
+    </select>
+
+
+    <select id="getApplyList" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           af.project_name projectName,
+           af.studio_name studioName,
+           af.company_name companyName,
+           af.update_date updateDate
+        FROM
+            apply_for_final_payment af
+        WHERE af.company_name = #{companyName} and af.project_name = #{projectName} and af.studio_name = #{studioName}
+    </select>
+
+    <resultMap id="CompanyProjectProgressMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="studioName" property="studioName"/>
+        <result column="finalPayment" property="finalPayment"/>
+        <result column="projectDescription" property="projectDescription"/>
+    </resultMap>
+    <select id="listCompanyProjectProgress" resultMap="CompanyProjectProgressMap">
+        SELECT
+        co.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     final_payment                           finalPayment,
+                     studio_name                             studioName,
+                     apply_for_final_payment                 applyForFinalPayment,
+                     project_description                     projectDescription
+                 FROM company_progress
+                 WHERE delete_status = '1' and company_name = #{companyName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) co
+        ORDER BY co.id
+    </select>
+
+    <select id="countCompanyProjectFinished" resultType="Integer">
+        SELECT count(0)
+        FROM company_finished f
+        WHERE f.delete_status = '1' and company_name = #{companyName}
+    </select>
+
+    <insert id="addFinishedList" useGeneratedKeys="true" keyProperty="companyName">
+        INSERT INTO company_finished
+        (project_name, studio_name, delete_status, company_name,budget,project_description) VALUES
+            (#{projectName}, #{studioName}, '1', #{companyName},#{budget}/0.9*0.1, #{projectDescription})
+    </insert>
+
+    <update id="updateFinishedProject">
+        UPDATE company_finished
+        SET
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and company_name = #{companyName}
+    </update>
+
+    <update id="updateFinishedProjectEvaluate">
+        UPDATE company_finished
+        SET
+        evaluate = #{evaluate},
+        evaluate_demand = #{evaluateDemand},
+        evaluate_ability = #{evaluateAbility},
+        evaluate_plan = #{evaluatePlan}
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <update id="updateFinishedProjectBudget">
+        UPDATE company_finished
+        SET
+        budget = (
+          SELECT project_budget
+          FROM demand
+          WHERE project_name = #{projectName} and employer_name = #{companyName}
+        )
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <resultMap id="CompanyProjectFinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="studioName" property="studioName"/>
+        <result column="evaluate" property="evaluate"/>
+        <result column="projectDescription" property="projectDescription"/>
+    </resultMap>
+    <select id="listCompanyProjectFinished" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+        f.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     evaluate                                evaluate,
+                     FORMAT(evaluate_demand,2)               evaluateDemand,
+                     FORMAT(evaluate_ability,2)              evaluateAbility,
+                     FORMAT(evaluate_plan,2)                 evaluatePlan,
+                     studio_name                             studioName,
+                     project_description                     projectDescription
+                 FROM company_finished
+                 WHERE delete_status = '1' and company_name = #{companyName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) f
+        ORDER BY f.id
+    </select>
+
+    <update id="participationProjectSuccess" parameterType="com.alibaba.fastjson.JSONObject">
+        update company_not_recruited
+           set apply_num = apply_num + 1
+        where project_name = #{projectName} AND company_name = #{companyName}
+     </update>
+</mapper>

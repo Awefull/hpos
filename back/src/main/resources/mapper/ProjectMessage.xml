@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.ProjectMessageDao">
+
+    <select id="countProjectMessage" resultType="Integer">
+        SELECT count(0)
+        FROM demand d
+    </select>
+
+    <resultMap id="projectMessageMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="projectDescription" property="projectDescription"/>
+        <result column="projectCycle" property="projectCycle"/>
+        <result column="projectBudget" property="projectBudget"/>
+        <result column="recruitmentRole" property="recruitmentRole"/>
+        <result column="projectDemand" property="projectDemand"/>
+        <result column="unitName" property="unitName"/>
+        <result column="projectType" property="projectType"/>
+        <result column="tenderStatus" property="tenderStatus"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+
+    <select id="listProjectMessage" resultMap="projectMessageMap">
+        SELECT
+            d.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     project_description                     projectDescription,
+                     project_cycle                           projectCycle,
+                     project_budget                          projectBudget,
+                     recruitment_role                        recruitmentRole,
+                     project_demand                          projectDemand,
+                     employer_name                           unitName,
+                     project_type                            projectType,
+                     tender_status                           tenderStatus
+                 FROM demand
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) d
+
+
+        ORDER BY d.id
+    </select>
+
+    <select id="getProjectMessageInfoByType" resultMap="projectMessageMap">
+        SELECT
+            d.*
+        FROM
+            demand d
+        WHERE d.project_type = #{projectType}
+    </select>
+
+    <select id="getProjectMessageInfoByStatus" resultMap="projectMessageMap">
+        SELECT
+            d.*
+        FROM
+            demand d
+        WHERE d.tender_status = #{tenderStatus}
+    </select>
+
+    <select id="getProjectMessageInfoByRole" resultMap="projectMessageMap">
+        SELECT
+            d.*
+        FROM
+            demand d
+        WHERE d.recruitment_role = #{recruitmentRole}
+    </select>
+
+
+
+    <select id="getProjectMessageInfoByName" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            d.*
+        FROM
+            demand d
+        WHERE d.employer_name = #{unitName}
+    </select>
+
+</mapper>

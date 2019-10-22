@@ -1,0 +1,147 @@
+.sidebar-menu {
+	float: left;
+	width: 23%;
+	height: 100%;
+	position: fixed;
+	background-color: $dark-bg;
+	color: $white;
+	overflow-y: hidden;
+	@include media(max-width 1290px) {
+		overflow-y: scroll;
+		width: 30%;
+	}
+}
+
+.top-section {
+	padding: 40px;
+}
+
+.profile-image {
+	width: 150px;
+	height: 150px;
+	border: 4px solid $white;
+	@include border-radius(75px);
+	overflow: hidden;
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+	}
+}
+
+h3.profile-title {
+	margin-bottom: 5px;
+	color: $white;
+	font-size: 18px;
+	font-family: 'robotobold';
+}
+
+
+.main-navigation {
+	margin: 30px 0;
+	li {
+		display: block;
+		a {
+			padding: 15px 40px;
+			display: block;
+			color: $white;
+			font-size: 14px;
+			i {
+				margin-right: 15px;
+				font-size: 24px;
+			}
+			&:hover {
+				background: darken($dark-bg, 2%);
+			}
+			&.active {
+				background: darken($dark-bg, 10%);
+				&:hover {
+					background: darken($dark-bg, 10%);
+				}
+			}
+		}
+	}
+}
+
+.social-icons {
+	display: block;
+	padding: 30px 40px;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+	a {
+		font-size: 18px;
+		color: $white;
+		&:hover {
+			color: darken($dark-bg, 25%);
+		}
+	}
+}
+
+
+.responsive-header {
+	background: $dark-bg;
+	text-align: center;
+	@include media(max-width $tablet) {
+		.main-navigation {
+			margin-top: 10px;
+			display: none;
+		}
+	}
+	p {
+		@include media(max-width $tablet) {
+			color: $white;
+		}
+	}
+	@include media(max-width $tablet) {
+		.profile-image {
+			float: left;
+			width: 100px;
+			height: 100px;
+			@include border-radius(50px);
+			overflow: hidden;
+			margin-right: 30px;
+		}
+		.profile-content {
+			text-align: left;
+			margin-top: 30px;
+			overflow: hidden;
+		}
+	}
+}
+
+.top-section {
+	@include media(max-width $tablet) {
+		padding-bottom: 0;
+	}
+}
+
+
+
+
+.main-navigation {
+	@include media(max-width $tablet) {
+		a {
+			padding: 10px;
+			&.active {
+				background: $dark-bg !important;
+			}
+			&:hover {
+				background: $dark-bg !important;
+			}
+		}
+	}
+}
+
+.toggle-menu {
+	width: 100%;
+	display: block;
+	padding: 20px;
+	margin-top: 30px;
+	background: $accent;
+	color: $white;
+	font-size: 18px;
+	&:hover {
+		color: $white;
+	}
+}

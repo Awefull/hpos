@@ -1,0 +1,77 @@
+body {
+	font-size: 14px;
+	line-height: 24px;
+	color: $body-color;
+	font-family: 'robotoregular';
+	overflow-x: hidden;
+}
+
+a {
+	color: $accent;
+	@include transition(all, 150ms, ease-in-out);
+	text-decoration: none !important;
+	&:hover {
+		color: $heading-color;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	color: $heading-color;
+}
+
+::-webkit-input-placeholder {
+   color: $light-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $light-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $light-color;
+}
+
+:-ms-input-placeholder {  
+   color: $light-color;
+}
+
+.main-content,
+.banner-bg {
+	float: right;
+	width: 77%;
+	@include media(max-width 1290px) {
+		width: 70%;
+	}
+	@include media(max-width $tablet) {
+		width: 100%;
+	}
+}
+
+.content-wrapper {
+	padding: 0 80px;
+	@include media(max-width $tablet) {
+		padding: 0 30px;
+	}
+}
+
+h4.widget-title {
+	font-size: 16px;
+	font-family: 'robotobold';
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+hr {
+	position: relative;
+	outline: 0;
+	border: 0;
+	width: 100%;
+	height: 4px;
+	background: $border-color;
+	margin-top: 40px;
+	margin-bottom: 0;
+}
+
+.page-section {
+	padding-top: 80px;
+}

@@ -1,0 +1,1144 @@
+2019-03-05 01:07:59.106 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30s699ms489µs580ns).
+2019-03-05 09:39:23.355 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h31m28s821ms706µs272ns).
+2019-03-05 09:58:31.392 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 14144 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 09:58:31.404 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 09:58:37.930 WARN  --- [OptionalLiveReloadServer.java:61][restartedMain] - Unable to start LiveReload server
+2019-03-05 09:58:38.010 ERROR --- [DirectJDKLog.java:175][restartedMain] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 17 common frames omitted
+2019-03-05 09:58:38.049 ERROR --- [LoggingFailureAnalysisReporter.java:42][restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-03-05 09:59:18.631 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 9052 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 09:59:18.638 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 09:59:24.484 WARN  --- [OptionalLiveReloadServer.java:61][restartedMain] - Unable to start LiveReload server
+2019-03-05 09:59:24.574 ERROR --- [DirectJDKLog.java:175][restartedMain] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 17 common frames omitted
+2019-03-05 09:59:24.606 ERROR --- [LoggingFailureAnalysisReporter.java:42][restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-03-05 09:59:43.594 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 09:59:43.627 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 09:59:43.641 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 09:59:43.752 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 09:59:43.766 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 09:59:43.774 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 09:59:43.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 09:59:43.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 09:59:43.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 09:59:43.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 09:59:43.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 09:59:43.783 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:00:10.440 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 9756 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 10:00:10.447 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 10:00:15.673 WARN  --- [OptionalLiveReloadServer.java:61][restartedMain] - Unable to start LiveReload server
+2019-03-05 10:00:15.739 ERROR --- [DirectJDKLog.java:175][restartedMain] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 17 common frames omitted
+2019-03-05 10:00:15.771 ERROR --- [LoggingFailureAnalysisReporter.java:42][restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-03-05 10:01:06.915 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 8712 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 10:01:06.923 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 10:01:12.175 WARN  --- [OptionalLiveReloadServer.java:61][restartedMain] - Unable to start LiveReload server
+2019-03-05 10:01:12.239 ERROR --- [DirectJDKLog.java:175][restartedMain] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 17 common frames omitted
+2019-03-05 10:01:12.270 ERROR --- [LoggingFailureAnalysisReporter.java:42][restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-03-05 10:05:34.612 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 4160 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 10:05:34.618 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 10:05:40.061 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 6.202 seconds (JVM running for 8.773)
+2019-03-05 10:06:16.318 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-03-05 10:06:16.541 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-03-05 10:06:16.552 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:06:16.590 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:06:16.628 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 10:06:17.031 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:06:17.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 10:06:17.036 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 10:06:17.073 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:06:17.074 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 10:06:17.077 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 10:06:17.079 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:06:17.080 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 10:06:17.083 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 10:07:46.722 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:07:46.723 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 10:07:46.728 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 10:07:46.729 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:07:46.730 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:07:46.733 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:07:46.734 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:07:46.734 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:07:46.746 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:08:56.587 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:08:56.588 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:08:56.603 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 10:08:56.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:08:56.841 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 10:08:56.846 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 10:08:56.847 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:08:56.848 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 10:08:56.851 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 10:08:56.852 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:08:56.854 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 10:08:56.856 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 10:08:59.479 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 10:08:59.479 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 10:08:59.515 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-05 10:08:59.516 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 10:08:59.518 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 10:08:59.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-05 10:08:59.522 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-05 10:08:59.537 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 19
+2019-03-05 10:08:59.771 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 10:08:59.772 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 10:08:59.773 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 10:08:59.774 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 10:08:59.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-05 10:08:59.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 10:08:59.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 3
+2019-03-05 10:11:20.999 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:11:21.000 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:11:21.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 10:11:21.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:11:21.251 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 10:11:21.255 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 10:11:21.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:11:21.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 10:11:21.259 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 10:11:21.260 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:11:21.260 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 10:11:21.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 10:26:59.602 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 10:26:59.603 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 10:26:59.620 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM article w WHERE w.delete_status = '1' 
+2019-03-05 10:26:59.621 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 10:26:59.627 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 10:26:59.628 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT w.id id, w.content content, date_format(w.create_time, '%Y.%m.%d %T') createTime FROM article w WHERE w.delete_status = '1' ORDER BY w.id DESC LIMIT ?, ? 
+2019-03-05 10:26:59.629 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-05 10:26:59.632 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 5
+2019-03-05 10:28:38.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:28:38.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 10:28:38.248 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 10:28:38.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:28:38.252 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:28:38.254 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:28:38.256 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:28:38.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:28:38.259 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:28:38.596 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 10:28:38.597 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 10:28:38.598 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM article w WHERE w.delete_status = '1' 
+2019-03-05 10:28:38.599 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 10:28:38.601 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 10:28:38.602 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT w.id id, w.content content, date_format(w.create_time, '%Y.%m.%d %T') createTime FROM article w WHERE w.delete_status = '1' ORDER BY w.id DESC LIMIT ?, ? 
+2019-03-05 10:28:38.604 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-05 10:28:38.608 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 5
+2019-03-05 10:38:33.280 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:38:33.282 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:38:33.285 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 10:38:33.329 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:38:33.331 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 10:38:33.333 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 10:38:33.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:38:33.335 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 10:38:33.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 10:38:33.338 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:38:33.339 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 10:38:33.353 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 10:40:30.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:40:30.425 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:40:30.428 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 10:40:30.477 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:40:30.478 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 10:40:30.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 10:40:30.483 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:40:30.484 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 10:40:30.494 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 10:40:30.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:40:30.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 10:40:30.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 10:55:37.111 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:55:37.113 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:55:37.119 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 10:55:37.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:55:37.358 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 10:55:37.363 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 10:55:37.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:55:37.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:55:37.366 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:55:37.367 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:55:37.367 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:55:37.368 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:55:44.526 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:55:44.527 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 10:55:44.530 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 10:55:44.531 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:55:44.532 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 10:55:44.542 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 10:55:44.546 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:55:44.547 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 10:55:44.550 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 10:56:16.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:56:16.886 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 10:56:16.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 10:56:16.890 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:56:16.891 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 10:56:16.900 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 10:56:16.901 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:56:16.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 10:56:16.905 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 10:56:18.086 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:56:18.088 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 10:56:18.091 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 10:56:18.092 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:56:18.093 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 10:56:18.095 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 10:56:18.096 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:56:18.098 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 10:56:18.100 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 10:58:01.693 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:58:01.695 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 10:58:01.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 10:58:01.702 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:58:01.702 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 10:58:01.712 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 10:58:01.713 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:58:01.714 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 10:58:01.715 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 10:58:20.974 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 10:58:20.975 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 10:58:20.980 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 10:58:21.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 10:58:21.346 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 10:58:21.352 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 10:58:21.354 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:58:21.355 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:58:21.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 10:58:21.359 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 10:58:21.360 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 10:58:21.362 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 14:02:46.731 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s949ms837µs827ns).
+2019-03-05 15:21:06.882 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m26s236ms769µs186ns).
+2019-03-05 15:28:57.673 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:28:57.674 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:28:57.683 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 15:28:58.017 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:28:58.018 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 15:28:58.020 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 15:28:58.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:28:58.022 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 15:28:58.024 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 15:28:58.025 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:28:58.026 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 15:28:58.042 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 15:31:05.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:31:05.886 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 15:31:05.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 15:31:05.891 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:31:05.898 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:31:05.900 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:31:05.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:31:05.903 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:31:05.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:33:37.885 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 15:33:37.886 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 15:33:37.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT count(0) FROM article w WHERE w.delete_status = '1' 
+2019-03-05 15:33:37.891 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 15:33:37.901 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 15:33:37.903 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT w.id id, w.content content, date_format(w.create_time, '%Y.%m.%d %T') createTime FROM article w WHERE w.delete_status = '1' ORDER BY w.id DESC LIMIT ?, ? 
+2019-03-05 15:33:37.903 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-05 15:33:37.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 5
+2019-03-05 15:33:50.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:33:50.637 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 15:33:50.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 15:33:50.641 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:33:50.641 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 15:33:50.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 15:33:50.644 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:33:50.645 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 15:33:50.651 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 15:33:50.994 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":1,"nickname":"超级用户23","roleName":"管理员","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10003}
+2019-03-05 15:33:50.994 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-05 15:33:50.996 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM article w WHERE w.delete_status = '1' 
+2019-03-05 15:33:50.996 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:33:50.999 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 15:33:51.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT w.id id, w.content content, date_format(w.create_time, '%Y.%m.%d %T') createTime FROM article w WHERE w.delete_status = '1' ORDER BY w.id DESC LIMIT ?, ? 
+2019-03-05 15:33:51.002 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-05 15:33:51.004 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 5
+2019-03-05 15:38:12.510 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:38:12.511 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:38:12.513 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 15:38:12.552 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:38:12.553 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 15:38:12.556 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 15:38:12.557 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:38:12.557 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 15:38:12.571 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 15:38:12.572 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:38:12.572 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 15:38:12.573 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 15:40:01.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:40:01.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:40:01.475 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 15:40:01.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:40:01.721 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 15:40:01.723 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 15:40:01.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:40:01.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 15:40:01.725 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 15:40:01.726 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:40:01.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 15:40:01.729 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 15:47:55.946 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:47:55.948 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:47:55.954 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 15:47:56.186 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:47:56.187 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 15:47:56.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 15:47:56.194 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:47:56.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 15:47:56.198 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 15:47:56.199 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:47:56.201 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 15:47:56.204 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 15:49:33.979 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:49:33.982 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:49:33.987 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 15:49:35.045 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:49:35.046 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 15:49:35.048 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 15:49:35.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:49:35.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 15:49:35.051 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 15:49:35.053 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:49:35.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 15:49:35.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 15:52:20.957 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:52:20.959 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:52:20.963 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 15:52:22.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:52:22.036 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 15:52:22.040 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 15:52:22.041 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:22.042 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:52:22.045 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:52:22.046 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:22.048 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:52:22.050 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:52:25.653 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:52:25.654 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:52:25.656 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 15:52:25.702 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:52:25.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 15:52:25.705 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 15:52:25.706 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:25.706 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:52:25.707 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 15:52:25.708 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:25.709 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:52:25.711 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 15:52:57.291 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:52:57.292 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:52:57.294 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 15:52:57.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:52:57.338 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 15:52:57.340 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 15:52:57.341 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:57.341 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 15:52:57.343 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 15:52:57.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:52:57.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 15:52:57.346 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 15:54:32.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:54:32.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 15:54:32.784 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 15:54:32.785 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:54:32.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 15:54:32.788 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 15:54:32.789 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:54:32.790 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 15:54:32.791 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 15:55:09.307 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:55:09.308 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 15:55:09.311 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 15:55:09.314 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:09.315 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 15:55:09.323 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 15:55:09.324 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:09.326 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 15:55:09.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 15:55:17.827 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:55:17.829 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 15:55:17.832 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 15:55:17.835 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:17.836 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 15:55:17.840 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 15:55:17.843 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:17.843 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 15:55:17.845 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 15:55:52.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:55:52.237 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 15:55:52.241 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 15:55:52.244 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:52.245 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:55:52.260 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:55:52.263 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:55:52.266 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:55:52.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:56:15.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:56:15.733 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:56:15.735 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 15:56:16.064 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:56:16.065 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 15:56:16.066 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 15:56:16.067 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:56:16.067 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:56:16.068 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 15:56:16.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:56:16.070 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:56:16.071 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 15:57:39.258 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:39.259 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:39.261 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 15:57:40.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:40.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:40.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 15:57:41.663 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:41.664 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:41.665 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 15:57:49.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:49.521 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:49.522 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 15:57:51.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:51.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:51.330 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 15:57:51.368 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:57:51.368 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 15:57:51.371 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 15:57:51.372 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:57:51.373 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:57:51.375 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:57:51.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:57:51.377 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 15:57:51.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 15:57:57.575 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 15:57:57.576 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 15:57:57.578 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 15:57:57.605 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 15:57:57.606 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 15:57:57.607 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 15:57:57.608 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:57:57.609 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:57:57.610 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 15:57:57.611 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 15:57:57.612 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 15:57:57.614 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 16:00:56.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:00:56.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 16:00:56.251 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 16:00:56.253 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:00:56.254 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:00:56.255 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 16:00:56.256 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:00:56.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:00:56.258 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 16:02:54.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 16:02:54.124 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 16:02:54.126 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 16:02:54.372 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:02:54.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 16:02:54.377 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 16:02:54.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:02:54.379 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 16:02:54.385 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 16:02:54.387 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:02:54.388 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 16:02:54.389 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 16:03:06.659 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 16:03:06.660 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 16:03:06.661 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 16:03:06.694 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:03:06.695 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 16:03:06.697 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 16:03:06.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:03:06.701 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 16:03:06.704 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 16:03:06.705 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:03:06.706 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 16:03:06.707 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 16:40:50.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 16:40:50.708 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 16:40:50.713 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 16:40:51.048 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:40:51.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 16:40:51.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 16:40:51.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:40:51.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 16:40:51.057 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 16:40:51.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:40:51.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 16:40:51.060 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 16:41:52.242 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:41:52.244 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 16:41:52.248 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 16:41:52.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:41:52.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:41:52.259 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 16:41:52.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:41:52.263 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:41:52.264 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 16:42:29.785 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:42:29.786 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 16:42:29.798 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 16:42:29.799 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:42:29.799 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 16:42:29.801 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 16:42:29.802 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:42:29.802 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 16:42:29.804 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 16:42:39.026 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:42:39.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 16:42:39.031 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 16:42:39.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:42:39.034 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 16:42:39.036 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 16:42:39.039 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:42:39.041 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 16:42:39.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 16:43:13.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:43:13.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 16:43:13.194 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 16:43:13.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:43:13.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 16:43:13.201 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 16:43:13.202 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:43:13.203 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 16:43:13.205 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 16:43:58.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:43:58.377 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 16:43:58.380 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 16:43:58.382 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:43:58.382 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 16:43:58.386 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 16:43:58.389 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:43:58.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 16:43:58.393 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 16:44:12.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:44:12.788 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 16:44:12.790 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 16:44:12.792 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:44:12.793 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 16:44:12.806 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 16:44:12.807 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:44:12.808 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 16:44:12.810 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 16:51:51.695 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 21500 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 16:51:51.704 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 16:52:01.046 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 10.288 seconds (JVM running for 15.468)
+2019-03-05 16:54:21.475 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-03-05 16:54:21.698 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-03-05 16:54:21.711 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 16:54:21.755 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 16:54:21.793 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 16:54:21.913 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 16:54:21.916 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 16:54:21.924 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 16:54:21.962 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:54:21.963 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:54:21.965 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 16:54:21.968 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 16:54:21.969 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 16:54:21.971 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 18:56:14.388 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h52m22s570ms210µs765ns).
+2019-03-05 19:05:46.163 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 23164 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 19:05:46.174 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 19:05:58.789 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 13.799 seconds (JVM running for 18.914)
+2019-03-05 19:13:53.128 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-03-05 19:13:53.377 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-03-05 19:13:53.389 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:13:53.430 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:13:53.470 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 19:13:53.581 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:13:53.583 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 19:13:53.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 19:13:53.633 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:13:53.634 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:13:53.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:13:53.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:13:53.640 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:13:53.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:21:39.620 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 3184 (D:\vue\SpringBoot-Shiro-Vue-master\back\target\classes started by hasee in D:\vue\SpringBoot-Shiro-Vue-master\back)
+2019-03-05 19:21:39.628 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-05 19:21:46.216 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 7.402 seconds (JVM running for 11.339)
+2019-03-05 19:23:56.823 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-2] - HikariPool-1 - Starting...
+2019-03-05 19:23:57.060 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-2] - HikariPool-1 - Start completed.
+2019-03-05 19:23:57.071 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:23:57.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:23:57.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 19:23:57.314 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:23:57.315 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 19:23:57.320 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 19:23:57.368 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:23:57.369 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:23:57.371 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:23:57.373 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:23:57.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:23:57.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:26:30.876 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:26:30.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 19:26:30.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 19:26:30.887 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:26:30.887 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:26:30.894 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:26:30.895 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:26:30.897 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:26:30.900 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:26:35.658 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:26:35.659 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:26:35.662 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 19:26:36.009 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:26:36.010 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 19:26:36.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 19:26:36.028 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:26:36.028 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:26:36.031 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:26:36.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:26:36.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:26:36.035 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:28:39.454 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:28:39.456 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 19:28:39.463 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 19:28:39.465 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:28:39.466 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:28:39.469 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:28:39.471 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:28:39.472 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:28:39.474 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:30:51.608 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:30:51.610 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 19:30:51.616 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 19:30:51.619 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:30:51.622 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:30:51.628 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:30:51.636 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:30:51.638 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:30:51.641 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:30:56.008 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:30:56.009 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String)
+2019-03-05 19:30:56.011 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 19:30:56.012 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:30:56.013 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 19:30:56.015 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-05 19:30:56.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:30:56.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 19:30:56.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-05 19:31:39.768 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:31:39.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 19:31:39.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 19:31:39.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:31:39.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 19:31:39.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 19:31:39.782 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:31:39.785 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 19:31:39.787 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 19:32:15.913 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:32:15.915 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 19:32:15.921 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 19:32:15.922 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:15.924 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:32:15.932 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:32:15.933 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:15.934 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:32:15.936 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:32:16.738 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:32:16.739 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 19:32:16.742 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 19:32:16.744 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:16.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:32:16.748 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:32:16.749 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:16.750 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:32:16.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:32:17.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:32:17.499 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 19:32:17.504 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 19:32:17.506 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:17.507 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:32:17.510 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:32:17.512 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:17.513 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:32:17.526 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:32:18.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:32:18.176 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 19:32:18.180 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 19:32:18.182 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:18.184 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 19:32:18.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 19:32:18.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:32:18.194 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 19:32:18.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 19:34:19.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:19.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 19:34:19.276 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 19:34:19.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:19.278 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 19:34:19.280 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 19:34:19.281 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:19.281 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 19:34:19.283 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 19:34:29.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:29.424 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 19:34:29.429 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 19:34:29.430 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:29.430 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:34:29.432 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:34:29.435 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:29.436 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:34:29.443 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:34:30.816 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:30.818 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 19:34:30.822 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 19:34:30.826 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:30.827 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:34:30.829 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:34:30.830 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:30.831 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:34:30.833 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:34:39.751 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:39.752 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 19:34:39.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 19:34:39.757 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:39.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:34:39.761 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:34:39.762 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:39.763 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:34:39.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:34:40.666 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:40.668 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String)
+2019-03-05 19:34:40.673 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 19:34:40.675 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:40.676 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 19:34:40.678 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-05 19:34:40.679 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:40.680 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 19:34:40.681 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-05 19:34:53.136 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:34:53.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:34:53.139 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 19:34:53.169 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:34:53.170 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 19:34:53.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 19:34:53.174 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:53.174 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:34:53.176 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:34:53.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:34:53.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:34:53.179 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:35:03.421 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:35:03.422 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 19:35:03.424 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 19:35:03.424 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:35:03.425 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:35:03.426 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:35:03.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:35:03.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:35:03.448 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:35:21.226 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:35:21.228 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:35:21.230 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 19:35:21.268 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:35:21.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 19:35:21.271 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 19:35:21.272 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:35:21.273 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:35:21.274 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:35:21.275 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:35:21.276 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 19:35:21.277 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 19:42:38.412 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:42:38.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 19:42:38.416 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 19:42:38.419 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:42:38.421 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:42:38.431 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:42:38.432 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:42:38.433 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 19:42:38.436 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 19:49:00.933 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:49:00.934 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 19:49:00.936 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 19:49:00.937 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:49:00.938 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:49:00.939 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:49:00.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:49:00.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 19:49:00.941 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 19:49:04.927 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 19:49:04.927 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 19:49:04.929 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 19:49:04.966 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:49:04.967 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 19:49:04.970 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 19:49:04.971 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:49:04.972 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:49:04.973 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:49:04.974 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:49:04.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 19:49:04.977 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 19:50:32.807 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:50:32.808 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 19:50:32.822 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 19:50:32.823 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:50:32.824 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:50:32.826 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:50:32.828 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:50:32.829 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 19:50:32.830 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 19:50:35.946 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 19:50:35.949 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 19:50:35.953 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 19:50:35.954 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:50:35.955 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:50:35.957 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 19:50:35.958 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 19:50:35.959 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 19:50:35.960 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 20:04:33.985 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:04:33.986 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 20:04:33.995 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 20:04:33.997 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:04:33.998 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 20:04:33.999 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 20:04:34.000 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:04:34.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 20:04:34.002 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 20:04:39.143 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:04:39.144 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:04:39.146 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 20:04:39.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:04:39.178 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 20:04:39.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 20:04:39.183 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:04:39.184 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:04:39.186 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:04:39.187 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:04:39.188 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:04:39.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:06:03.723 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:06:03.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:06:03.729 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 20:06:03.972 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:06:03.973 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 20:06:03.975 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 20:06:03.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:06:03.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 20:06:03.978 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 20:06:03.979 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:06:03.980 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 20:06:03.993 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 20:07:04.345 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:07:04.346 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 20:07:04.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 20:07:04.352 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:07:04.354 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 20:07:04.356 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 20:07:04.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:07:04.358 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 20:07:04.361 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 20:07:08.149 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:07:08.150 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:07:08.187 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 20:07:08.221 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:07:08.222 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String)
+2019-03-05 20:07:08.225 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 20:07:08.227 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:07:08.228 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 20:07:08.232 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 20:07:08.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:07:08.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-05 20:07:08.235 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-05 20:08:44.327 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:08:44.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:08:44.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 20:08:44.630 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:08:44.631 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 20:08:44.634 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 20:08:44.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:08:44.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:08:44.649 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:08:44.651 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:08:44.653 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:08:44.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:11:21.360 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:11:21.363 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-05 20:11:21.369 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 20:11:21.371 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:21.372 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 20:11:21.375 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 20:11:21.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:21.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-05 20:11:21.380 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-05 20:11:24.408 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:11:24.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:11:24.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 20:11:24.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:11:24.755 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: admin(String)
+2019-03-05 20:11:24.756 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-05 20:11:24.758 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:24.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 20:11:24.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 20:11:24.761 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:24.762 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-05 20:11:24.764 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-05 20:11:33.060 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:11:33.061 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String)
+2019-03-05 20:11:33.064 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 20:11:33.065 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:33.066 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 20:11:33.068 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 20:11:33.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:33.070 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-05 20:11:33.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-05 20:11:36.457 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:11:36.458 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:11:36.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-05 20:11:36.492 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:11:36.493 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String)
+2019-03-05 20:11:36.494 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 20:11:36.495 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:36.496 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 20:11:36.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 20:11:36.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:36.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-05 20:11:36.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-05 20:11:45.049 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:11:45.050 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 20:11:45.053 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 20:11:45.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:45.056 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 20:11:45.057 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 20:11:45.059 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:11:45.059 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 20:11:45.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 20:22:04.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:22:04.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-05 20:22:04.077 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-05 20:22:04.080 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:22:04.082 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:22:04.086 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:22:04.088 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:22:04.090 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-05 20:22:04.093 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-05 20:26:37.052 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:26:37.053 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:26:37.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 20:26:37.096 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:26:37.097 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-05 20:26:37.099 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-05 20:26:37.100 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:26:37.100 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 20:26:37.101 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 20:26:37.102 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:26:37.103 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-05 20:26:37.104 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-05 20:27:09.738 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 20:27:09.740 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 20:27:09.743 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-05 20:27:09.774 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 20:27:09.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: admin(String)
+2019-03-05 20:27:09.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-05 20:27:09.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:27:09.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 20:27:09.789 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 20:27:09.790 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 20:27:09.791 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-05 20:27:09.792 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-05 21:14:03.345 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 21:14:03.354 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 21:14:03.366 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-05 21:14:03.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 21:14:03.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String)
+2019-03-05 21:14:03.769 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-05 21:14:03.771 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 21:14:03.772 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 21:14:03.774 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 21:14:03.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 21:14:03.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-05 21:14:03.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-05 21:15:19.664 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-05 21:15:19.665 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String), 123456(String)
+2019-03-05 21:15:19.666 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-05 21:15:19.899 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-05 21:15:19.900 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String)
+2019-03-05 21:15:19.914 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-05 21:15:19.915 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 21:15:19.916 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 21:15:19.917 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-05 21:15:19.918 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-05 21:15:19.921 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-05 21:15:19.924 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10

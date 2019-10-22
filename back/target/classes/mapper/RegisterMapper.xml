@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.RegisterDao">
+
+    <insert id="register" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO account
+           (username,password, email, telephone, address, role_id, unit_name)
+        VALUES
+            (#{username},#{password}, #{email}, #{telephone}, #{address},#{roleId},#{unitName})
+    </insert>
+
+</mapper>

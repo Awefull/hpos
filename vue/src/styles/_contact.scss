@@ -1,0 +1,21 @@
+.contact-form {
+	margin-top: 40px;
+	input, textarea {
+		width: 100%;
+		outline: 0;
+		border: 1px solid darken($border-color, 20%);
+		padding: 12px;
+		color: $light-color;
+		margin-bottom: 30px;
+		&:focus {
+			outline: 0;
+		}
+	}
+	.button {
+		width: auto;
+		background: $dark-bg;
+		color: $white;
+		text-transform: uppercase;
+		border: 0;
+	}
+}

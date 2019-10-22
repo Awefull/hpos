@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.CompanyMessageDao">
+
+    <select id="countCompanyMessage" resultType="Integer">
+        SELECT count(0)
+        FROM account a
+        WHERE a.delete_status = '1' and unit_name = #{unitName}
+    </select>
+
+    <resultMap id="companyMessageMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="description" property="description"/>
+        <result column="unitName" property="unitName"/>
+        <result column="address" property="address"/>
+        <result column="telephone" property="telephone"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+
+    <select id="listCompanyMessage" resultMap="companyMessageMap">
+        SELECT
+            a.*
+        FROM (
+                 SELECT
+                     account_id                                      id,
+                     description                                     description,
+                     unit_name                                       unitName,
+                     address                                         address,
+                     telephone                                       telephone
+                 FROM account
+                 WHERE delete_status = '1' and unit_name = #{unitName}
+                 ORDER BY account_id
+                 LIMIT #{offSet}, #{pageRow}
+             ) a
+
+
+        ORDER BY a.account_id
+    </select>
+
+    <select id="getCompanyMessage" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            a.*
+        FROM
+            account a
+        WHERE a.unit_name = #{unitName}
+          AND a.delete_status = '1'
+    </select>
+</mapper>

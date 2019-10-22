@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.CompanyInfoDao">
+
+    <select id="countCompanyInfo" resultType="Integer">
+        SELECT count(0)
+        FROM demand d
+    </select>
+
+    <select id="listCompanyInfo"  resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_name                                    projectName,
+             d.project_type                                    projectType,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.unit_name = d.employer_name
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+
+    <!--<select id="getCompanyInfo" resultType="com.alibaba.fastjson.JSONObject">-->
+        <!--SELECT-->
+            <!--a.*-->
+        <!--FROM-->
+            <!--account a-->
+        <!--WHERE a.unit_name = #{unitName}-->
+          <!--AND a.delete_status = '1'-->
+    <!--</select>-->
+
+    <select id="filterRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_name                                    projectName,
+             d.project_type                                    projectType,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.unit_name = d.employer_name
+         AND d.recruitment_role = #{serveRole}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <select id="filterServePlace" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_name                                    projectName,
+             d.project_type                                    projectType,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.address = #{servePlace}
+         GROUP BY a.account_id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+
+    <select id="filterProjectType" resultType="com.alibaba.fastjson.JSONObject">
+         SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_name                                    projectName,
+             d.project_type                                    projectType,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND d.project_type = #{projectType}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <select id="filterPlaceANDRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.address = #{servePlace}
+         AND d.recruitment_role = #{serveRole}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <select id="filterTypeANDRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND d.recruitment_role = #{serveRole}
+         AND d.project_type = #{projectType}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <select id="filterPlaceANDType" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.address = #{servePlace}
+         AND d.project_type = #{projectType}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <select id="filterTypePlaceRole" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+             a.account_id                                      id,
+             a.unit_name                                       unitName,
+             a.address                                         address,
+             d.project_description                             projectDescription,
+             d.project_cycle                                   projectCycle,
+             d.project_budget                                  projectBudget,
+             d.recruitment_role                                recruitmentRole,
+             cnr.apply_num                                       applyNum
+         FROM account a, demand d, company_not_recruited cnr
+         WHERE a.delete_status = '1' AND a.role_id = '3'
+         AND a.address = #{servePlace}
+         AND d.recruitment_role = #{serveRole}
+         AND d.project_type = #{projectType}
+         GROUP BY d.id
+         ORDER BY a.account_id
+         LIMIT #{offSet}, #{pageRow}
+    </select>
+
+</mapper>

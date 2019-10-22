@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heeexy.example.dao.CostManagementDao">
+
+    <select id="countCostManagement" resultType="Integer">
+        SELECT count(0)
+        FROM cost_management c
+    </select>
+
+    <resultMap id="costManagementMap" type="com.heeexy.example.util.model.One2Many">
+        <result column="projectName" property="projectName"/>
+        <result column="companyName" property="companyName"/>
+        <result column="studioName" property="studioName"/>
+        <result column="deposit" property="deposit"/>
+        <result column="finalPayment" property="finalPayment"/>
+        <result column="depositIsPayed" property="depositIsPayed"/>
+        <result column="finalPaymentIsPayed" property="finalPaymentIsPayed"/>
+    </resultMap>
+
+    <select id="listCostManagement" resultMap="costManagementMap">
+        SELECT
+        c.*
+        FROM (
+                 SELECT
+                     project_name                             projectName,
+                     company_name                             companyName,
+                     studio_name                              studioName,
+                     deposit                                  deposit,
+                     final_payment                            finalPayment,
+                     deposit_isPayed                          depositIsPayed,
+                     final_payment_isPayed                    finalPaymentIsPayed
+                 FROM cost_management
+                 LIMIT #{offSet}, #{pageRow}
+             ) c
+    </select>
+
+    <update id="updateCostDeposit">
+        UPDATE cost_management
+        SET
+        deposit_isPayed = '1'
+        WHERE project_name = #{projectName} and company_name = #{companyName}
+    </update>
+
+    <update id="updateCostFinal_payment">
+        UPDATE cost_management
+        SET
+        final_payment_isPayed = '1'
+        WHERE project_name = #{projectName} and company_name = #{companyName}
+    </update>
+</mapper>

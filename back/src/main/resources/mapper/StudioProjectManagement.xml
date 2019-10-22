@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.StudioProjectManagementDao">
+
+    <select id="countStudioNotRecruited" resultType="Integer">
+        SELECT count(0)
+        FROM studio_not_recruited s
+        WHERE s.delete_status = '1' and studio_name = #{studioName}
+    </select>
+
+    <resultMap id="studioNotRecruitedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="deposit" property="deposit"/>
+        <result column="finalPayment" property="finalPayment"/>
+        <result column="companyName" property="companyName"/>
+        <result column="bidStatus" property="bidStatus"/>
+        <result column="studioName" property="studioName"/>
+        <result column="projectDescription" property="projectDescription"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+
+    <select id="listStudioNotRecruited" resultMap="studioNotRecruitedMap">
+        SELECT
+            s.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     deposit                                 deposit,
+                     final_payment                           finalPayment,
+                     company_name                            companyName,
+                     bid_status                              bidStatus,
+                     studio_name                             studioName,
+                     project_description                     projectDescription
+                 FROM studio_not_recruited
+                 WHERE delete_status = '1' and studio_name = #{studioName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) s
+
+
+        ORDER BY s.id
+    </select>
+
+    <update id="updateNotRecruitedBidStatus">
+        UPDATE studio_not_recruited
+        SET
+        bid_status = '3'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name != #{studioName}
+    </update>
+
+    <update id="deleteStudioProgress">
+        UPDATE studio_progress
+        SET
+        delete_status = '0'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <update id="deleteStudioNotRecruited">
+        UPDATE studio_not_recruited
+        SET
+        delete_status = '0'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+    <update id="updateRecruitedBidStatus">
+        UPDATE studio_not_recruited
+        SET
+        bid_status = '1'
+        WHERE project_name = #{projectName} and company_name = #{companyName} and studio_name = #{studioName}
+    </update>
+
+
+    <insert id="addStudioNotRecruited" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO studio_not_recruited
+        (project_name, deposit, final_payment, company_name ,bid_status ,delete_status, project_description) VALUES
+            (#{projectName}, #{deposit}, #{finalPayment}, #{companyName}, #{bidStatus}, #{deleteStatus}, #{projectDescription})
+    </insert>
+
+    <update id="updateNotRecruitedProject">
+        UPDATE studio_not_recruited
+        SET
+        bid_status = #{bidStatus},
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and studio_name = #{studioName}
+    </update>
+
+
+
+    <select id="countStudioProgress" resultType="Integer">
+        SELECT count(0)
+        FROM studio_progress s
+        WHERE s.delete_status = '1'
+    </select>
+
+    <resultMap id="studioProgressMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="deposit" property="deposit"/>
+        <result column="finalPayment" property="finalPayment"/>
+        <result column="projectProgress" property="projectProgress"/>
+        <result column="companyName" property="companyName"/>
+        <result column="deleteStatus" property="deleteStatus"/>
+        <result column="studioName" property="studioName"/>
+        <result column="projectDescription" property="projectDescription"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+    <select id="listStudioProgress" resultMap="studioProgressMap">
+        SELECT
+            s.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     deposit                                 deposit,
+                     final_payment                           finalPayment,
+                     project_progress                        projectProgress,
+                     company_name                            companyName,
+                     studio_name                             studioName,
+                     delete_status                           deleteStatus,
+                     project_description                     projectDescription
+                 FROM studio_progress
+                 WHERE delete_status = '1' and studio_name = #{studioName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) s
+
+
+        ORDER BY s.id
+    </select>
+    <insert id="addStudioProgress">
+        INSERT INTO studio_progress
+        (project_name, deposit, final_payment, company_name ,delete_status ,studio_name, project_description) VALUES
+            (#{projectName}, #{deposit}, #{deposit}/0.1*0.9, #{companyName}, '1', #{studioName}, #{projectDescription})
+    </insert>
+
+    <insert id="addLog" useGeneratedKeys="true" keyProperty="studioName">
+    INSERT INTO project_progress_log
+    (project_name,  progress_log,company_name,studio_name) VALUES
+    (#{projectName}, #{projectProgress},#{companyName},  #{studioName})
+    </insert>
+
+    <select id="getProjectProgressLog" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           pl.date updateDate,
+           pl.progress_log progressLog
+        FROM
+            project_progress_log pl
+        WHERE pl.studio_name = #{studioName} and pl.project_name = #{projectName}
+    </select>
+
+    <update id="updateStudioProgress">
+        UPDATE studio_progress
+        SET
+        project_progress = #{projectProgress},
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and studio_name = #{studioName}
+    </update>
+
+
+
+
+
+    <select id="countStudioFinished" resultType="Integer">
+        SELECT count(0)
+        FROM studio_finished s
+        WHERE s.delete_status = '1'
+    </select>
+
+    <resultMap id="studioFinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="budget" property="budget"/>
+        <result column="companyName" property="companyName"/>
+        <result column="evaluate" property="evaluate"/>
+        <result column="deleteStatus" property="deleteStatus"/>
+        <result column="projectDescription" property="projectDescription"/>
+        <!--<collection property="permissionList" ofType="String">-->
+        <!--<id column="permissionName" property="permissionName"/>-->
+        <!--</collection>-->
+    </resultMap>
+
+    <select id="listStudioFinished" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            s.*
+        FROM (
+                 SELECT
+                     id                                      id,
+                     project_name                            projectName,
+                     budget                                  budget,
+                     company_name                            companyName,
+                     evaluate                                evaluate,
+                     FORMAT(evaluate_demand,2)               evaluateDemand,
+                     FORMAT(evaluate_ability,2)              evaluateAbility,
+                     FORMAT(evaluate_plan,2)                 evaluatePlan,
+                     studio_name                             studioName,
+                     project_description                     projectDescription
+                 FROM studio_finished
+                 WHERE delete_status = '1' and studio_name = #{studioName}
+                 ORDER BY id
+                 LIMIT #{offSet}, #{pageRow}
+             ) s
+
+
+        ORDER BY s.id
+    </select>
+
+
+    <insert id="addStudioFinished" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO studio_finished
+        (project_name, budget, company_name ,evaluate ,delete_status,studio_name, project_description) VALUES
+            (#{projectName}, #{budget}/0.9, #{companyName}, #{evaluate}, '1', #{studioName}, #{projectDescription})
+    </insert>
+
+    <update id="updateFinishedProject">
+        UPDATE studio_finished
+        SET
+        delete_status = #{deleteStatus}
+        WHERE project_name = #{projectName} and studio_name = #{studioName}
+    </update>
+
+    <select id="countProjectNum" resultType="Integer">
+        SELECT count(0)
+        FROM studio_finished
+        WHERE delete_status = '1'and  studio_name = {#studioName}
+    </select>
+</mapper>

@@ -1,0 +1,880 @@
+2019-03-21 01:31:58.033 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s59ms4µs397ns).
+2019-03-21 09:12:33.724 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h40m41s427ms214µs675ns).
+2019-03-21 10:04:42.244 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:04:42.251 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String), 123456(String)
+2019-03-21 10:04:42.286 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-21 10:04:42.326 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:04:42.327 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-21 10:04:42.333 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 10:04:42.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 10:04:42.357 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 10:04:42.359 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 10:04:42.360 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 10:04:42.361 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 10:04:42.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 10:07:08.898 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:07:08.899 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String), 123456(String)
+2019-03-21 10:07:08.901 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 10:07:08.950 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:08.952 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 10:07:08.956 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 10:07:10.554 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:10.555 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-03-21 10:07:10.558 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-21 10:07:11.295 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:11.294 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:11.296 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:11.296 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:11.300 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:11.301 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:11.354 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 10:07:11.360 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 10:07:11.360 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 10:07:11.361 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 10:07:11.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-03-21 10:07:11.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 10:07:11.366 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 10:07:11.369 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 10:07:11.383 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 19
+2019-03-21 10:07:18.854 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:07:18.855 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String), 123465(String)
+2019-03-21 10:07:18.857 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 0
+2019-03-21 10:07:22.949 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:07:22.950 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String), 123456(String)
+2019-03-21 10:07:22.953 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-21 10:07:23.198 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:23.199 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String)
+2019-03-21 10:07:23.201 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 10:07:27.082 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:27.083 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:27.085 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 10:07:27.085 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 10:07:27.087 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 10:07:27.088 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 10:07:27.089 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 10:07:27.094 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 19
+2019-03-21 10:07:27.385 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:27.386 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:27.387 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:27.387 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:27.388 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 10:07:27.389 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 10:07:27.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 10:07:33.477 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:33.478 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 10:07:33.480 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 10:07:39.483 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:39.485 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 10:07:39.488 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 10:07:54.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:07:54.338 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-03-21 10:07:54.341 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-21 10:07:54.586 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:54.587 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:54.588 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 10:07:54.589 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 10:07:54.591 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 10:07:54.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 10:07:54.594 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 10:07:54.601 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 19
+2019-03-21 10:07:54.896 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:54.897 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:54.899 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:07:54.902 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:07:54.907 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 10:07:54.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 10:07:54.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 3
+2019-03-21 10:09:36.629 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:09:36.630 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:09:36.632 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 10:09:36.633 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 10:09:36.635 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-21 10:09:36.637 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 10:09:36.639 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 10:09:36.649 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 19
+2019-03-21 10:09:36.729 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:09:36.730 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:09:36.730 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:09:36.731 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:09:36.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 10:09:36.733 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 10:09:36.740 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 3
+2019-03-21 10:10:08.053 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:10:08.055 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String)
+2019-03-21 10:10:08.061 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 10:10:08.250 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:10:08.250 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:10:08.252 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 10:10:08.253 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 10:10:08.254 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 10:10:08.256 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 10:10:08.257 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 10:10:08.274 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 19
+2019-03-21 10:10:08.380 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:10:08.381 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:10:08.381 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 10:10:08.381 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 10:10:08.383 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 10:10:08.385 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 10:10:08.389 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 10:15:29.266 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:15:29.270 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 10:15:29.274 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 10:19:40.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:19:40.392 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 10:19:40.395 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 10:19:50.646 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:19:50.647 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: test(String), 132465(String)
+2019-03-21 10:19:50.648 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 0
+2019-03-21 10:19:53.408 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:19:53.409 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: test(String), 123456(String)
+2019-03-21 10:19:53.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 10:19:53.756 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:19:53.758 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: test(String)
+2019-03-21 10:19:53.760 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 7
+2019-03-21 10:22:32.695 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:22:32.697 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: test(String)
+2019-03-21 10:22:32.705 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 7
+2019-03-21 10:22:56.074 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:22:56.075 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: test(String)
+2019-03-21 10:22:56.078 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 7
+2019-03-21 10:39:00.535 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:39:00.537 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: test(String)
+2019-03-21 10:39:00.541 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-03-21 10:39:10.973 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:39:10.974 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String), 123456(String)
+2019-03-21 10:39:10.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 10:39:11.019 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:39:11.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String)
+2019-03-21 10:39:11.027 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-21 10:41:06.582 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:41:06.583 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 10:41:06.586 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 10:41:09.464 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 10:41:09.465 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123456(String)
+2019-03-21 10:41:09.467 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 10:41:09.509 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:41:09.510 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-03-21 10:41:09.514 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-21 10:41:35.580 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:41:35.581 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: user(String)
+2019-03-21 10:41:35.584 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-21 10:41:39.746 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:41:39.747 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String)
+2019-03-21 10:41:39.749 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-21 10:41:45.873 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:41:45.875 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String)
+2019-03-21 10:41:45.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-21 10:42:27.585 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:42:27.587 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 10:42:27.590 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 10:44:54.350 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 10:44:54.351 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String)
+2019-03-21 10:44:54.354 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 11:00:18.344 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 11:00:18.345 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String), 123456(String)
+2019-03-21 11:00:18.348 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 11:00:18.582 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 11:00:18.584 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String)
+2019-03-21 11:00:18.588 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-21 11:01:52.114 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 11:01:52.116 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 11:01:52.118 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 11:03:32.741 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 11:03:32.743 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 11:03:32.745 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 11:03:39.115 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:03:39.115 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:03:39.117 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:03:39.117 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:03:39.118 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:03:39.118 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:03:39.119 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 11:03:39.134 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 11:03:39.134 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 11:03:39.135 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 11:03:39.136 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 11:03:39.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-03-21 11:03:39.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 11:03:39.138 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 11:03:39.144 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 19
+2019-03-21 11:03:40.187 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:03:40.187 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:03:40.187 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:03:40.187 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:03:40.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT r.id roleId, r.role_name roleName, u.id userId, u.nickname nickname, p.id permissionId, p.menu_code menuCode, p.menu_name menuName, p.permission_name permissionName FROM sys_role r LEFT JOIN sys_user u ON r.id = u.role_id AND u.delete_status = '1' LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.delete_status = '1' LEFT JOIN sys_permission p ON rp.permission_id = p.id WHERE r.delete_status = '1' ORDER BY r.id, p.id 
+2019-03-21 11:03:40.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT p.id id, p.menu_name menuName, p.permission_name permissionName, p.required_permission requiredPerm FROM sys_permission p; 
+2019-03-21 11:03:40.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 11:03:40.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 11:03:40.224 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-21 11:03:40.234 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 19
+2019-03-21 11:04:05.628 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 11:04:05.629 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 11:04:05.632 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 11:04:05.859 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:04:05.859 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:04:05.861 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT r.id roleId, r.role_name roleName, u.id userId, u.nickname nickname, p.id permissionId, p.menu_code menuCode, p.menu_name menuName, p.permission_name permissionName FROM sys_role r LEFT JOIN sys_user u ON r.id = u.role_id AND u.delete_status = '1' LEFT JOIN sys_role_permission rp ON r.id = rp.role_id AND rp.delete_status = '1' LEFT JOIN sys_permission p ON rp.permission_id = p.id WHERE r.delete_status = '1' ORDER BY r.id, p.id 
+2019-03-21 11:04:05.862 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 11:04:05.865 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 19
+2019-03-21 11:04:06.165 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 11:04:06.166 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 11:04:06.167 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT p.id id, p.menu_name menuName, p.permission_name permissionName, p.required_permission requiredPerm FROM sys_permission p; 
+2019-03-21 11:04:06.168 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 11:04:06.174 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-21 12:00:49.738 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m15s414ms291µs426ns).
+2019-03-21 13:26:28.349 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s393ms826µs454ns).
+2019-03-21 13:30:16.184 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 13:30:16.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String), 123456(String)
+2019-03-21 13:30:16.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 13:30:16.228 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 13:30:16.229 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 13:30:16.237 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 13:30:18.460 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 13:30:18.461 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: user(String)
+2019-03-21 13:30:18.463 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-21 14:13:38.340 WARN  --- [HikariPool.java:766][HikariPool-1 housekeeper] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m9s893ms621µs418ns).
+2019-03-21 15:45:08.374 INFO  --- [HikariDataSource.java:350][Thread-33] - HikariPool-1 - Shutdown initiated...
+2019-03-21 15:45:08.454 INFO  --- [HikariDataSource.java:352][Thread-33] - HikariPool-1 - Shutdown completed.
+2019-03-21 15:45:11.521 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 6912 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-03-21 15:45:11.523 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-21 15:45:15.551 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 4.214 seconds (JVM running for 70256.798)
+2019-03-21 15:45:16.384 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 23240 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-03-21 15:45:16.390 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-03-21 15:45:19.321 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-2 - Starting...
+2019-03-21 15:45:19.331 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-2 - Start completed.
+2019-03-21 15:45:19.338 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:45:19.339 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:45:19.405 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 15:45:19.539 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:45:19.545 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 15:45:19.555 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 15:45:23.168 WARN  --- [OptionalLiveReloadServer.java:61][restartedMain] - Unable to start LiveReload server
+2019-03-21 15:45:23.238 ERROR --- [DirectJDKLog.java:175][restartedMain] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 17 common frames omitted
+2019-03-21 15:45:23.276 ERROR --- [LoggingFailureAnalysisReporter.java:42][restartedMain] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-03-21 15:45:34.243 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:45:34.244 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String)
+2019-03-21 15:45:34.246 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-21 15:48:17.643 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:48:17.645 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-03-21 15:48:17.649 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-21 15:48:29.443 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:48:29.444 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:48:29.446 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 15:48:29.472 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:48:29.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String)
+2019-03-21 15:48:29.476 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 10
+2019-03-21 15:49:15.113 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:49:15.115 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: admin(String), 123456(String)
+2019-03-21 15:49:15.117 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 15:49:15.362 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:49:15.362 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: admin(String)
+2019-03-21 15:49:15.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-21 15:49:15.365 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 15:49:15.366 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 15:49:15.368 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 15:49:15.369 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 15:49:15.370 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 15:49:15.371 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 15:49:31.106 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:49:31.108 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: admin(String)
+2019-03-21 15:49:31.111 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 15:49:31.113 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 15:49:31.114 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 15:49:31.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 15:49:31.125 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 15:49:31.127 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 15:49:31.128 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 15:49:48.777 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:49:48.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:49:48.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-21 15:49:49.030 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:49:49.031 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 15:49:49.034 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 15:50:12.975 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:50:12.977 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 15:50:12.990 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 15:50:18.807 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:50:18.808 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String), 123465(String)
+2019-03-21 15:50:18.819 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 0
+2019-03-21 15:50:21.931 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:50:21.933 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:50:21.934 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 15:50:22.180 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:50:22.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: user(String)
+2019-03-21 15:50:22.183 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 10
+2019-03-21 15:51:28.882 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:51:28.883 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String), 123465(String)
+2019-03-21 15:51:28.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 0
+2019-03-21 15:51:33.719 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:51:33.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:51:33.722 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 15:51:33.976 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:51:33.977 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 15:51:33.979 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 15:51:48.154 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 15:51:48.155 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String), 123456(String)
+2019-03-21 15:51:48.157 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 15:51:48.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 15:51:48.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String)
+2019-03-21 15:51:48.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 10
+2019-03-21 17:46:15.586 WARN  --- [HikariPool.java:766][HikariPool-2 housekeeper] - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h53m56s139ms552µs680ns).
+2019-03-21 19:23:11.057 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 19:23:11.066 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123456(String)
+2019-03-21 19:23:11.092 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 19:23:11.135 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 19:23:11.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String)
+2019-03-21 19:23:11.147 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-21 19:23:14.126 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 19:23:14.128 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: user(String)
+2019-03-21 19:23:14.131 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 10
+2019-03-21 20:10:40.998 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:10:41.004 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:10:41.010 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-21 20:10:41.247 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:10:41.250 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String)
+2019-03-21 20:10:41.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-21 20:10:42.515 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:10:42.518 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 20:10:42.520 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 20:14:14.490 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:14:14.491 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String)
+2019-03-21 20:14:14.493 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 10
+2019-03-21 20:18:24.570 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:18:24.572 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: admin(String), 123456(String)
+2019-03-21 20:18:24.576 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-21 20:18:24.809 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:18:24.811 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: admin(String)
+2019-03-21 20:18:24.812 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 20:18:24.813 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.menu_code menuCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 20:18:24.814 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 20:18:24.818 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 20:18:24.819 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT p.permission_code permissionCode FROM sys_permission p ORDER BY p.id 
+2019-03-21 20:18:24.819 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 20:18:24.821 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 20:18:36.038 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:18:36.039 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:18:36.040 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 20:18:36.289 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:18:36.290 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: user(String)
+2019-03-21 20:18:36.293 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 10
+2019-03-21 20:18:46.434 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:18:46.435 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:18:46.456 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:18:46.457 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:18:46.458 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:18:46.459 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:18:46.481 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 20:18:46.482 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 20:18:46.483 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 20:18:46.483 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 20:18:46.485 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-03-21 20:18:46.489 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 20:18:46.493 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 20:18:46.495 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 20:18:46.516 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 19
+2019-03-21 20:20:42.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:20:42.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String), 123465(String)
+2019-03-21 20:20:42.377 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 0
+2019-03-21 20:20:48.000 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:20:48.001 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:20:48.003 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 20:20:48.331 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:20:48.333 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 20:20:48.337 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 20:20:49.577 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:20:49.578 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:20:49.580 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 20:20:49.580 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 20:20:49.582 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 20:20:49.584 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 20:20:49.586 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 20:20:49.601 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 19
+2019-03-21 20:20:49.881 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:20:49.882 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:20:49.883 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:20:49.884 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:20:49.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 20:20:49.886 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 20:20:49.888 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 20:45:01.058 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:45:01.059 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:45:01.062 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 20:45:01.311 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:45:01.312 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: test(String)
+2019-03-21 20:45:01.319 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 7
+2019-03-21 20:45:41.497 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:45:41.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:45:41.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 20:45:41.743 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:45:41.744 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: test(String)
+2019-03-21 20:45:41.747 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 7
+2019-03-21 20:46:33.939 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:46:33.941 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: test(String)
+2019-03-21 20:46:33.944 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 7
+2019-03-21 20:46:46.068 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:46:46.069 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:46:46.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-21 20:46:46.310 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:46:46.311 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: test(String)
+2019-03-21 20:46:46.313 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 7
+2019-03-21 20:46:56.377 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:46:56.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: test(String)
+2019-03-21 20:46:56.381 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 7
+2019-03-21 20:47:04.175 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:04.175 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: user(String), 12456(String)
+2019-03-21 20:47:04.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 0
+2019-03-21 20:47:07.248 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:07.249 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:47:07.251 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-21 20:47:07.498 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:47:07.499 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String)
+2019-03-21 20:47:07.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 10
+2019-03-21 20:47:14.121 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:47:14.122 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:47:14.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 20:47:14.124 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 20:47:14.126 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 20:47:14.127 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 20:47:14.129 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 20:47:14.134 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 19
+2019-03-21 20:47:14.423 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:47:14.424 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:47:14.425 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":2,"nickname":"莎士比亚","roleName":"作家","permissionList":["article:list","user:list","user:add","role:update","article:add","role:list","article:update","user:update","role:delete","role:add"],"userId":10004}
+2019-03-21 20:47:14.426 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, user:add, role:update, article:add, role:list, article:update, user:update, role:delete, role:add]
+2019-03-21 20:47:14.426 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 20:47:14.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 20:47:14.429 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 3
+2019-03-21 20:47:19.813 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:19.814 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:47:19.816 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 20:47:20.061 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:47:20.062 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: test(String)
+2019-03-21 20:47:20.064 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 7
+2019-03-21 20:47:31.430 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:31.431 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: test(String), 123465(String)
+2019-03-21 20:47:31.433 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 0
+2019-03-21 20:47:34.653 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:34.654 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:47:34.655 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 20:47:34.984 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:47:34.985 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: test(String)
+2019-03-21 20:47:34.987 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 7
+2019-03-21 20:47:57.268 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:47:57.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:47:57.271 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 20:47:57.521 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:47:57.522 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: test(String)
+2019-03-21 20:47:57.523 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 7
+2019-03-21 20:49:34.919 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:49:34.920 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:49:34.926 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 20:49:35.169 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:49:35.170 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String)
+2019-03-21 20:49:35.172 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 10
+2019-03-21 20:49:48.123 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:49:48.124 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: test(String), 123456(String)
+2019-03-21 20:49:48.125 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 20:49:48.373 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:49:48.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: test(String)
+2019-03-21 20:49:48.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 7
+2019-03-21 20:51:53.981 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:51:53.982 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: test(String)
+2019-03-21 20:51:53.985 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 7
+2019-03-21 20:52:22.937 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 20:52:22.938 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: user(String), 123456(String)
+2019-03-21 20:52:22.940 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-21 20:52:23.190 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:52:23.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: user(String)
+2019-03-21 20:52:23.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 10
+2019-03-21 20:55:17.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 20:55:17.217 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: user(String)
+2019-03-21 20:55:17.219 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 10
+2019-03-21 21:09:17.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 21:09:17.365 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: test(String), 123456(String)
+2019-03-21 21:09:17.369 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 21:09:17.610 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:09:17.612 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: test(String)
+2019-03-21 21:09:17.616 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 7
+2019-03-21 21:09:20.724 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:09:20.725 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:09:20.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:09:20.728 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 21:09:20.730 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 21:09:20.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:09:20.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:09:20.736 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 19
+2019-03-21 21:09:21.029 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:09:21.030 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:09:21.031 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:09:21.032 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:09:21.033 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:09:21.035 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 21:09:21.037 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 3
+2019-03-21 21:12:47.122 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:12:47.123 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:12:47.124 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:12:47.129 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:12:47.132 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:12:47.133 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:12:47.134 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 21:12:47.134 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:12:47.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 21:12:47.137 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:12:47.138 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 21:12:47.139 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:12:47.140 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:12:47.140 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-03-21 21:12:47.147 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 19
+2019-03-21 21:15:26.407 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:26.407 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:26.408 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:26.408 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:26.409 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:26.411 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:26.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:15:26.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 21:15:26.415 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:15:26.416 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 21:15:26.416 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 21:15:26.418 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:15:26.418 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 3
+2019-03-21 21:15:26.419 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:15:26.423 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 19
+2019-03-21 21:15:29.975 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:29.975 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:29.976 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:29.977 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:29.978 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:29.980 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:30.016 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:15:30.019 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:15:30.019 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 21:15:30.021 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 21:15:30.022 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 21:15:30.023 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 3
+2019-03-21 21:15:30.024 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:15:30.026 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:15:30.035 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 19
+2019-03-21 21:15:32.393 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:32.394 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:32.396 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:15:32.396 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 21:15:32.398 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-03-21 21:15:32.400 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:15:32.401 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:15:32.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 19
+2019-03-21 21:15:32.698 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:32.698 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:32.699 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:32.700 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:32.701 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:15:32.701 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 21:15:32.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 21:15:34.899 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:34.899 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:34.900 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:34.900 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:34.901 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:34.902 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:34.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:15:34.905 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 21:15:34.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:15:34.907 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 21:15:34.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 21:15:34.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 3
+2019-03-21 21:15:34.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:15:34.910 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:15:34.915 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 19
+2019-03-21 21:15:39.447 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:39.448 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:39.450 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:15:39.452 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 21:15:39.454 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 21:15:39.455 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:15:39.457 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:15:39.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 19
+2019-03-21 21:15:39.752 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:39.752 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:39.753 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:15:39.753 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:15:39.754 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:15:39.755 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 21:15:39.756 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 3
+2019-03-21 21:17:35.322 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:17:35.324 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:17:35.328 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:17:35.328 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:17:35.330 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:17:35.330 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 21:17:35.331 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:17:35.332 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:17:35.333 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-03-21 21:17:35.333 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:17:35.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 21:17:35.334 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:17:35.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:17:35.336 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 3
+2019-03-21 21:17:35.340 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 19
+2019-03-21 21:18:24.776 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:18:24.778 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: test(String)
+2019-03-21 21:18:24.781 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 7
+2019-03-21 21:18:25.235 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:18:25.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: test(String)
+2019-03-21 21:18:25.238 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 7
+2019-03-21 21:18:25.411 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:18:25.413 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: test(String)
+2019-03-21 21:18:25.416 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-03-21 21:18:25.902 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:18:25.902 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:18:25.903 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:18:25.903 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:18:25.903 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:18:25.904 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:18:25.905 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:18:25.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:18:25.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 21:18:25.907 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 21:18:25.908 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-03-21 21:18:25.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 3
+2019-03-21 21:18:25.910 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:18:25.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:18:25.917 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 19
+2019-03-21 21:19:49.955 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 21:19:49.956 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: test(String), 123456(String)
+2019-03-21 21:19:49.957 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 21:19:50.301 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:19:50.302 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: test(String)
+2019-03-21 21:19:50.304 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 7
+2019-03-21 21:20:18.265 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 21:20:18.266 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: test(String), 123456(String)
+2019-03-21 21:20:18.267 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 21:20:18.604 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:20:18.605 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: test(String)
+2019-03-21 21:20:18.607 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 7
+2019-03-21 21:20:28.795 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 21:20:28.796 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: test(String), 123456(String)
+2019-03-21 21:20:28.799 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 21:20:29.135 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:20:29.136 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: test(String)
+2019-03-21 21:20:29.138 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 7
+2019-03-21 21:26:31.701 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:26:31.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: test(String)
+2019-03-21 21:26:31.714 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 7
+2019-03-21 21:26:38.485 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:26:38.486 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: test(String)
+2019-03-21 21:26:38.488 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 7
+2019-03-21 21:26:39.390 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.id userId, u.username username, u.password password, u.nickname nickName FROM sys_user u WHERE u.username = ? AND u.password = ? AND u.delete_status = '1' 
+2019-03-21 21:26:39.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: test(String), 123456(String)
+2019-03-21 21:26:39.392 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 21:26:39.426 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT u.id userId, u.nickname nickname, u.role_id roleId, r.role_name roleName, p.menu_code menuCode, p.permission_code permissionCode FROM sys_user u LEFT JOIN sys_role r ON r.id = u.role_id LEFT JOIN sys_role_permission rp ON u.role_id = rp.role_id LEFT JOIN sys_permission p ON rp.permission_id = p.id AND rp.delete_status = '1' WHERE u.username = ? AND u.delete_status = '1' 
+2019-03-21 21:26:39.427 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: test(String)
+2019-03-21 21:26:39.432 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 7
+2019-03-21 21:26:46.713 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:46.713 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:46.714 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:46.714 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:46.716 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:46.718 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:46.720 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:46.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:46.724 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 21:26:46.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 21:26:46.728 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-03-21 21:26:46.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-03-21 21:26:46.779 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:46.780 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:46.789 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 19
+2019-03-21 21:26:47.921 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:47.921 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:47.923 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:47.924 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 21:26:47.925 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 21:26:47.926 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:47.927 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:47.931 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 19
+2019-03-21 21:26:48.225 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:48.226 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:48.227 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:48.228 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:48.230 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:48.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 21:26:48.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 3
+2019-03-21 21:26:51.368 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:51.369 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:51.370 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:51.370 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:51.371 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:51.372 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:51.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:51.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:51.376 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 21:26:51.378 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 21:26:51.381 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-03-21 21:26:51.382 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 3
+2019-03-21 21:26:51.383 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:51.385 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:51.390 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 19
+2019-03-21 21:26:54.068 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:54.070 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:54.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:54.072 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 21:26:54.075 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 21:26:54.077 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:54.078 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:54.081 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 19
+2019-03-21 21:26:54.360 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:54.361 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:54.362 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:54.362 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:54.363 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:54.364 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 21:26:54.365 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 3
+2019-03-21 21:26:55.460 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:55.460 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:55.461 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:55.461 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:55.462 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:55.463 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:55.463 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:55.464 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 21:26:55.468 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 21:26:55.472 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:55.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:55.473 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:55.474 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 21:26:55.477 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 21:26:55.477 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 19
+2019-03-21 21:26:57.192 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:57.192 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:57.194 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:57.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 21:26:57.198 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 21:26:57.199 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:57.201 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:57.205 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 19
+2019-03-21 21:26:57.496 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:57.497 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:57.497 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:57.498 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:57.499 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:57.500 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 21:26:57.501 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 3
+2019-03-21 21:26:58.869 INFO  --- [UserRealm.java:36][http-nio-8080-exec-3] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:58.869 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:58.870 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:58.870 INFO  --- [UserRealm.java:37][http-nio-8080-exec-3] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:58.871 INFO  --- [UserRealm.java:36][http-nio-8080-exec-6] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:58.871 INFO  --- [UserRealm.java:37][http-nio-8080-exec-6] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:58.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:58.872 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:26:58.873 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 
+2019-03-21 21:26:58.873 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-03-21 21:26:58.875 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-03-21 21:26:58.875 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 3
+2019-03-21 21:26:58.876 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:58.879 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:58.899 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 19
+2019-03-21 21:26:59.875 INFO  --- [UserRealm.java:36][http-nio-8080-exec-8] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:26:59.876 INFO  --- [UserRealm.java:37][http-nio-8080-exec-8] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:26:59.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:26:59.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-03-21 21:26:59.880 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-03-21 21:26:59.881 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:26:59.881 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:26:59.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 19
+2019-03-21 21:27:00.178 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:00.179 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:00.180 INFO  --- [UserRealm.java:36][http-nio-8080-exec-4] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:00.180 INFO  --- [UserRealm.java:37][http-nio-8080-exec-4] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:00.182 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:27:00.182 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 
+2019-03-21 21:27:00.192 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 3
+2019-03-21 21:27:01.108 INFO  --- [UserRealm.java:36][http-nio-8080-exec-7] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:01.110 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:01.110 INFO  --- [UserRealm.java:37][http-nio-8080-exec-7] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:01.111 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:01.113 INFO  --- [UserRealm.java:36][http-nio-8080-exec-9] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:01.115 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:27:01.115 INFO  --- [UserRealm.java:37][http-nio-8080-exec-9] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:01.116 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-03-21 21:27:01.117 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:27:01.118 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-03-21 21:27:01.118 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 
+2019-03-21 21:27:01.119 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:27:01.120 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:27:01.128 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 19
+2019-03-21 21:27:01.130 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 3
+2019-03-21 21:27:02.459 INFO  --- [UserRealm.java:36][http-nio-8080-exec-2] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:02.460 INFO  --- [UserRealm.java:37][http-nio-8080-exec-2] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:02.461 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:27:02.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 
+2019-03-21 21:27:02.463 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-03-21 21:27:02.464 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:27:02.465 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:27:02.481 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 19
+2019-03-21 21:27:02.761 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:02.762 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:02.762 INFO  --- [UserRealm.java:36][http-nio-8080-exec-10] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:02.763 INFO  --- [UserRealm.java:37][http-nio-8080-exec-10] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:02.764 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:27:02.765 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 
+2019-03-21 21:27:02.766 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 3
+2019-03-21 21:27:03.745 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:03.745 INFO  --- [UserRealm.java:36][http-nio-8080-exec-5] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:03.745 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:03.746 INFO  --- [UserRealm.java:37][http-nio-8080-exec-5] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:03.746 INFO  --- [UserRealm.java:36][http-nio-8080-exec-1] - permission的值为:{"menuList":["role","user","article"],"roleId":3,"nickname":"就看看列表","roleName":"程序员","permissionList":["article:list","user:list","article:add","role:list","role:delete","user:update","role:add"],"userId":10007}
+2019-03-21 21:27:03.747 INFO  --- [UserRealm.java:37][http-nio-8080-exec-1] - 本用户权限为:[article:list, user:list, article:add, role:list, role:delete, user:update, role:add]
+2019-03-21 21:27:03.747 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT count(0) FROM sys_user u WHERE u.delete_status = '1' 
+2019-03-21 21:27:03.748 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT id roleId, role_name roleName FROM sys_role WHERE delete_status='1' 
+2019-03-21 21:27:03.749 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 
+2019-03-21 21:27:03.749 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 
+2019-03-21 21:27:03.751 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-03-21 21:27:03.752 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 3
+2019-03-21 21:27:03.753 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT u.*, r.role_name roleName, CONCAT(p.menu_name, p.permission_name) permissionName FROM ( SELECT id userId, username username, nickname nickname, role_id roleId, delete_status deleteStatus, DATE_FORMAT(create_time, '%Y.%m.%d %T') createTime, DATE_FORMAT(update_time, '%Y.%m.%d %T') updateTime FROM sys_user WHERE delete_status = '1' ORDER BY id LIMIT ?, ? ) u LEFT JOIN sys_role r ON r.id = u.roleId LEFT JOIN sys_role_permission rp ON rp.role_id = r.id LEFT JOIN sys_permission p ON p.id = rp.permission_id ORDER BY u.userId 
+2019-03-21 21:27:03.755 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 0(Integer), 50(Integer)
+2019-03-21 21:27:03.759 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 19

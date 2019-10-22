@@ -1,0 +1,7 @@
+spring:
+  datasource:
+      url: jdbc:mysql://106.15.179.52:10086/hpos?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+      username: test
+      password: fwwb123456
+mybatis:
+   mapperLocations: classpath:/mapper/*.xml

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heeexy.example.dao.ExamineDao">
+
+    <select id="countCompanyNotExamineAccount" resultType="Integer">
+        SELECT count(0)
+        FROM account c
+        WHERE c.delete_status = '1' and role_id = '3'
+    </select>
+
+    <select id="countAdvertisementNotExamine" resultType="Integer">
+        SELECT count(0)
+        FROM advertisement c
+    </select>
+
+    <select id="countStudioNotExamineAccount" resultType="Integer">
+        SELECT count(0)
+        FROM account c
+        WHERE c.delete_status = '1' and role_id = '2'
+    </select>
+
+    <resultMap id="companyNotExamineAccountMap" type="com.heeexy.example.util.model.One2Many">
+        <result column="username" property="username"/>
+        <result column="email" property="email"/>
+        <result column="address" property="address"/>
+        <result column="telephone" property="telephone"/>
+        <result column="unit_name" property="unit_name"/>
+        <result column="is_examined" property="is_examined"/>
+    </resultMap>
+
+    <resultMap id="studioNotExamineAccountMap" type="com.heeexy.example.util.model.One2Many">
+        <result column="username" property="username"/>
+        <result column="email" property="email"/>
+        <result column="address" property="address"/>
+        <result column="telephone" property="telephone"/>
+        <result column="unit_name" property="unit_name"/>
+        <result column="is_examined" property="is_examined"/>
+    </resultMap>
+
+    <resultMap id="advertisementNotExamineAccountMap" type="com.heeexy.example.util.model.One2Many">
+        <result column="unitName" property="unitName"/>
+        <result column="applicationDays" property="applicationDays"/>
+        <result column="amount" property="amount"/>
+        <result column="attachmentId" property="attachmentId"/>
+        <result column="auditResults" property="auditResults"/>
+        <result column="updateDate" property="updateDate"/>
+    </resultMap>
+
+    <select id="listCompanyNotExamineAccount" resultMap="companyNotExamineAccountMap">
+        SELECT
+        c.*
+        FROM (
+                 SELECT
+                     username                                username,
+                     email                                   email,
+                     address                                 address,
+                     telephone                               telephone,
+                     unit_name                               unit_name,
+                     is_examined                             is_examined
+                 FROM account
+                 WHERE delete_status = '1' and role_id = '3'
+                 ORDER BY username
+                 LIMIT #{offSet}, #{pageRow}
+             ) c
+        ORDER BY c.username
+    </select>
+
+    <select id="listStudioNotExamineAccount" resultMap="studioNotExamineAccountMap">
+        SELECT
+        c.*
+        FROM (
+                 SELECT
+                     username                                username,
+                     email                                   email,
+                     address                                 address,
+                     telephone                               telephone,
+                     unit_name                               unit_name,
+                     is_examined                             is_examined
+                 FROM account
+                 WHERE delete_status = '1' and role_id = '2'
+                 ORDER BY username
+                 LIMIT #{offSet}, #{pageRow}
+             ) c
+        ORDER BY c.username
+    </select>
+
+    <select id="listAdvertisementNotExamine" resultMap="advertisementNotExamineAccountMap">
+        SELECT
+        c.*
+        FROM (
+                 SELECT
+                     unit_name                               unitName,
+                     application_days                        applicationDays,
+                     amount                                  amount,
+                     attachment_id                           attachmentId,
+                     audit_results                           auditResults,
+                     update_date                             updateDate
+                 FROM advertisement
+                 ORDER BY unit_name
+                 LIMIT #{offSet}, #{pageRow}
+             ) c
+    </select>
+
+    <update id="updateExamineAccount">
+        UPDATE account
+        SET
+        is_examined = '1'
+        WHERE username = #{username} and email = #{email}
+    </update>
+
+    <update id="updateNoExamineAccount">
+        UPDATE account
+        SET
+        is_examined = '2'
+        WHERE username = #{username} and email = #{email}
+    </update>
+
+    <update id="updateAdvertisementExamine">
+        UPDATE advertisement
+        SET
+        audit_results = '1'
+        WHERE unit_name = #{unitName} and application_days = #{applicationDays}
+    </update>
+
+    <update id="updateAdvertisementNoExamine">
+        UPDATE advertisement
+        SET
+        audit_results = '2'
+        WHERE unit_name = #{unitName} and application_days = #{applicationDays}
+    </update>
+</mapper>

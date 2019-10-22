@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.TransactionDao">
+
+    <select id="isExistCompanyName" resultType="int">
+    select
+    count(*) as count
+    from cost_management cm
+    where cm.company_name = #{unitName}
+  </select>
+
+    <select id="isExistStudioName" resultType="int">
+    select
+    count(*) as count
+    from cost_management cm
+    where cm.studio_name = #{unitName}
+  </select>
+
+    <select id="getBalanceOfCompany" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            sum(cm.deposit+final_payment) as balance
+        FROM
+            cost_management cm
+        WHERE cm.company_name = #{unitName}
+    </select>
+
+    <select id="getBalanceOfStudio" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            sum(cm.deposit+final_payment) as balance
+        FROM
+            cost_management cm
+        WHERE cm.studio_name = #{unitName}
+    </select>
+
+    <select id="countOutstandingTransactionsOfCompany" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            COUNT(*) as outstandingNum
+        FROM
+            company_not_recruited cmr, company_progress cmp
+        WHERE (cmr.company_name = #{unitName} AND cmr.tender_status = '0') OR cmp.company_name = #{unitName}
+    </select>
+
+    <select id="countOutstandingTransactionsOfStudio" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            COUNT(*) as outstandingNum
+        FROM
+            studio_not_recruited smr, studio_progress smp
+        WHERE (smr.studio_name = #{unitName} AND smr.tender_status = '0') OR smp.studio_name = #{unitName}
+    </select>
+
+    <select id="countCompletedTransactionsOfCompany" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            COUNT(*) as completedNum
+        FROM
+            company_finished cf
+        WHERE cf.company_name = #{unitName}
+    </select>
+
+    <select id="countCompletedTransactionsOfStudio" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+            COUNT(*) as completedNum
+        FROM
+            studio_finished sf
+        WHERE sf.studio_name = #{unitName}
+    </select>
+
+    <resultMap id="CompanyProjectFinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="unitName" property="unitName"/>
+        <result column="budget" property="budget"/>
+
+    </resultMap>
+    <select id="completedTransactionsOfCompanyList" resultMap="CompanyProjectFinishedMap">
+        SELECT
+        cf.project_name                            projectName,
+        cf.budget                                  budget,
+        cf.studio_name                             unitName
+        FROM company_finished cf
+        WHERE cf.company_name = #{unitName}
+    </select>
+
+    <resultMap id="StudioProjectFinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="unitName" property="unitName"/>
+        <result column="budget" property="budget"/>
+
+    </resultMap>
+    <select id="completedTransactionsOfStudioList" resultMap="StudioProjectFinishedMap">
+        SELECT
+        sf.project_name                            projectName,
+        sf.budget                                  budget,
+        sf.company_name                            unitName
+        FROM studio_finished sf
+        WHERE sf.studio_name = #{unitName}
+    </select>
+
+    <resultMap id="CompanyProjectUnfinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="unitName" property="unitName"/>
+
+    </resultMap>
+    <select id="outstandingTransactionsOfCompanyList1" resultMap="CompanyProjectUnfinishedMap">
+        SELECT
+        cmr.project_name                            projectName,
+        cmr.studio_name                             unitName
+        FROM company_not_recruited cmr
+        WHERE cmr.company_name = #{unitName} AND cmr.tender_status = '0'
+    </select>
+
+    <select id="outstandingTransactionsOfCompanyList2" resultMap="CompanyProjectUnfinishedMap">
+
+        SELECT
+        cmp.project_name                            projectName,
+        cmp.studio_name                             unitName
+        FROM company_progress cmp
+        WHERE cmp.company_name = #{unitName}
+    </select>
+
+    <resultMap id="StudioProjectUnfinishedMap" type="com.heeexy.example.util.model.One2Many">
+        <id column="id" property="id"/>
+        <result column="projectName" property="projectName"/>
+        <result column="unitName" property="unitName"/>
+
+    </resultMap>
+    <select id="outstandingTransactionsOfStudioList1" resultMap="StudioProjectUnfinishedMap">
+        SELECT
+        sr.project_name                            projectName,
+        sr.company_name                            unitName
+        FROM studio_not_recruited sr
+        WHERE sr.studio_name = #{unitName} AND sr.bid_status = '2'
+    </select>
+
+    <select id="outstandingTransactionsOfStudioList2" resultMap="StudioProjectUnfinishedMap">
+        SELECT
+        sp.project_name                            projectName,
+        sp.company_name                            unitName
+        FROM studio_progress sp
+        WHERE sp.studio_name = #{unitName}
+    </select>
+
+</mapper>

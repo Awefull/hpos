@@ -1,0 +1,129 @@
+2019-05-06 21:01:38.259 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 17456 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-05-06 21:01:38.270 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:01:51.449 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 14.128 seconds (JVM running for 19.126)
+2019-05-06 21:06:01.317 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 19860 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-05-06 21:06:01.329 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:06:09.286 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.806 seconds (JVM running for 13.786)
+2019-05-06 21:15:51.369 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 21024 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-05-06 21:15:51.378 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:15:58.564 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.083 seconds (JVM running for 11.787)
+2019-05-06 21:17:30.726 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-05-06 21:17:31.056 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-05-06 21:17:31.067 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:17:31.113 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:17:31.171 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:17:31.176 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:17:31.177 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:17:31.191 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:21:44.496 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 17432 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-05-06 21:21:44.507 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:21:51.861 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.262 seconds (JVM running for 11.562)
+2019-05-06 21:22:22.400 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-05-06 21:22:22.763 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-05-06 21:22:22.775 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:22:22.815 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:22:22.873 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:22:22.877 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:22:22.878 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:22:22.895 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:22:24.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT count(0) FROM company_progress co WHERE co.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:24.216 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:24.219 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:24.219 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT count(0) FROM company_finished f WHERE f.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:24.220 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:24.220 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:24.229 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-05-06 21:22:24.231 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT co.* FROM ( SELECT id id, project_name projectName, final_payment finalPayment, studio_name studioName, apply_for_final_payment applyForFinalPayment, project_description projectDescription FROM company_progress WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) co ORDER BY co.id 
+2019-05-06 21:22:24.233 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:24.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-05-06 21:22:24.236 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-05-06 21:22:24.238 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT f.* FROM ( SELECT id id, project_name projectName, evaluate evaluate, FORMAT(evaluate_demand,2) evaluateDemand, FORMAT(evaluate_ability,2) evaluateAbility, FORMAT(evaluate_plan,2) evaluatePlan, studio_name studioName, project_description projectDescription FROM company_finished WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) f ORDER BY f.id 
+2019-05-06 21:22:24.238 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum, project_description projectDescription FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-05-06 21:22:24.239 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:24.239 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:24.246 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-05-06 21:22:24.258 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-05-06 21:22:24.259 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 4
+2019-05-06 21:22:28.949 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:22:28.951 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: Web网站(String)
+2019-05-06 21:22:28.970 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 3
+2019-05-06 21:22:29.462 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand 
+2019-05-06 21:22:29.464 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 
+2019-05-06 21:22:29.484 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 6
+2019-05-06 21:22:30.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:22:30.197 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: Web网站(String)
+2019-05-06 21:22:30.217 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 3
+2019-05-06 21:22:30.503 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand 
+2019-05-06 21:22:30.504 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 
+2019-05-06 21:22:30.523 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 6
+2019-05-06 21:22:32.883 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT count(0) FROM company_progress co WHERE co.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:32.885 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:32.886 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:32.887 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:32.889 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM company_finished f WHERE f.delete_status = '1' and company_name = ? 
+2019-05-06 21:22:32.890 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 发猿地(String)
+2019-05-06 21:22:32.904 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-05-06 21:22:32.904 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-05-06 21:22:32.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT co.* FROM ( SELECT id id, project_name projectName, final_payment finalPayment, studio_name studioName, apply_for_final_payment applyForFinalPayment, project_description projectDescription FROM company_progress WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) co ORDER BY co.id 
+2019-05-06 21:22:32.906 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum, project_description projectDescription FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-05-06 21:22:32.907 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:22:32.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:32.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:32.909 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT f.* FROM ( SELECT id id, project_name projectName, evaluate evaluate, FORMAT(evaluate_demand,2) evaluateDemand, FORMAT(evaluate_ability,2) evaluateAbility, FORMAT(evaluate_plan,2) evaluatePlan, studio_name studioName, project_description projectDescription FROM company_finished WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) f ORDER BY f.id 
+2019-05-06 21:22:32.911 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:22:32.923 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-05-06 21:22:32.928 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-05-06 21:22:32.928 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 4
+2019-05-06 21:22:37.902 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT pl.date updateDate, pl.progress_log progressLog FROM project_progress_log pl WHERE pl.company_name = ? and pl.project_name = ? 
+2019-05-06 21:22:37.903 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 发猿地(String), 商城网站建设(String)
+2019-05-06 21:22:37.917 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-05-06 21:22:42.589 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT pl.date updateDate, pl.progress_log progressLog FROM project_progress_log pl WHERE pl.company_name = ? and pl.project_name = ? 
+2019-05-06 21:22:42.590 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: 发猿地(String), 商城网站建设(String)
+2019-05-06 21:22:42.606 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 1
+2019-05-06 21:35:20.666 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT count(0) FROM company_not_recruited c WHERE c.delete_status = '1' and company_name = ? 
+2019-05-06 21:35:20.669 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 发猿地(String)
+2019-05-06 21:35:20.670 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT count(0) FROM company_progress co WHERE co.delete_status = '1' and company_name = ? 
+2019-05-06 21:35:20.672 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 发猿地(String)
+2019-05-06 21:35:20.673 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM company_finished f WHERE f.delete_status = '1' and company_name = ? 
+2019-05-06 21:35:20.675 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 发猿地(String)
+2019-05-06 21:35:20.683 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-05-06 21:35:20.685 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT c.* FROM ( SELECT id id, project_name projectName, deposit deposit, tender_status tenderStatus, studio_name studioName, apply_num applyNum, project_description projectDescription FROM company_not_recruited WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) c ORDER BY c.id 
+2019-05-06 21:35:20.687 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:35:20.690 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-05-06 21:35:20.691 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:35:20.692 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==>  Preparing: SELECT co.* FROM ( SELECT id id, project_name projectName, final_payment finalPayment, studio_name studioName, apply_for_final_payment applyForFinalPayment, project_description projectDescription FROM company_progress WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) co ORDER BY co.id 
+2019-05-06 21:35:20.693 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:35:20.700 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 1
+2019-05-06 21:35:20.711 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT f.* FROM ( SELECT id id, project_name projectName, evaluate evaluate, FORMAT(evaluate_demand,2) evaluateDemand, FORMAT(evaluate_ability,2) evaluateAbility, FORMAT(evaluate_plan,2) evaluatePlan, studio_name studioName, project_description projectDescription FROM company_finished WHERE delete_status = '1' and company_name = ? ORDER BY id LIMIT ?, ? ) f ORDER BY f.id 
+2019-05-06 21:35:20.712 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-8] - <==      Total: 1
+2019-05-06 21:35:20.714 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: 发猿地(String), 0(Integer), 10(Integer)
+2019-05-06 21:35:20.732 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 4
+2019-05-06 21:35:25.011 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT pl.date updateDate, pl.progress_log progressLog FROM project_progress_log pl WHERE pl.company_name = ? and pl.project_name = ? 
+2019-05-06 21:35:25.011 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: 发猿地(String), 商城网站建设(String)
+2019-05-06 21:35:25.032 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-05-06 21:35:30.040 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==>  Preparing: SELECT pl.date updateDate, pl.progress_log progressLog FROM project_progress_log pl WHERE pl.company_name = ? and pl.project_name = ? 
+2019-05-06 21:35:30.042 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - ==> Parameters: 发猿地(String), 商城网站建设(String)
+2019-05-06 21:35:30.054 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-10] - <==      Total: 1
+2019-05-06 21:35:36.593 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE id = ? 
+2019-05-06 21:35:36.594 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - ==> Parameters: 1(Integer)
+2019-05-06 21:35:36.609 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-3] - <==      Total: 1
+2019-05-06 21:35:40.267 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:35:40.268 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - ==> Parameters: Web网站(String)
+2019-05-06 21:35:40.288 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-4] - <==      Total: 3
+2019-05-06 21:35:41.181 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:35:41.183 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: App开发(String)
+2019-05-06 21:35:41.201 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 2
+2019-05-06 21:35:41.695 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:35:41.696 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - ==> Parameters: 微信公众号(String)
+2019-05-06 21:35:41.715 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-5] - <==      Total: 1
+2019-05-06 21:35:44.373 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand WHERE project_type = ? 
+2019-05-06 21:35:44.374 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: 微信公众号(String)
+2019-05-06 21:35:44.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-05-06 21:35:47.592 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==>  Preparing: SELECT id id, project_name projectName, project_description projectDescription, demand_type demandType, project_cycle projectCycle, project_budget projectBudget, recruitment_role recruitmentRole, project_demand projectDemand, tender_status tenderStatus, apply_num applyNum, project_type projectType, employer_name employerName, comment_money commentMoney, comment_time commentTime, comment_reliable commentReliable, comment_hard commentHard, file_id fileId FROM demand 
+2019-05-06 21:35:47.592 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - ==> Parameters: 
+2019-05-06 21:35:47.606 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-7] - <==      Total: 6
+2019-05-06 21:52:21.458 INFO  --- [HikariDataSource.java:350][Thread-26] - HikariPool-1 - Shutdown initiated...
+2019-05-06 21:52:21.468 INFO  --- [HikariDataSource.java:352][Thread-26] - HikariPool-1 - Shutdown completed.
+2019-05-06 21:52:22.772 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 17432 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-05-06 21:52:22.773 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-05-06 21:52:26.509 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 3.854 seconds (JVM running for 1846.21)

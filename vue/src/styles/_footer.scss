@@ -1,0 +1,12 @@
+#footer {
+	p.copyright-text {
+		margin: 40px 0;
+		font-size: 13px;
+		a {
+			color: $dark-bg;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+}

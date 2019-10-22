@@ -1,0 +1,80 @@
+2019-05-06 21:10:27.814 INFO  --- [StartupInfoLogger.java:50][main] - Starting MyApplication v1.1.0-SNAPSHOT on DESKTOP-BHGM3HS with PID 20912 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\example-1.1.0-SNAPSHOT.jar started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target)
+2019-05-06 21:10:27.833 INFO  --- [SpringApplication.java:675][main] - No active profile set, falling back to default profiles: default
+2019-05-06 21:10:36.935 ERROR --- [DirectJDKLog.java:175][main] - Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.heeexy.example.MyApplication.main(MyApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 20 common frames omitted
+2019-05-06 21:10:36.987 ERROR --- [LoggingFailureAnalysisReporter.java:42][main] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-06 21:10:59.281 INFO  --- [StartupInfoLogger.java:50][main] - Starting MyApplication v1.1.0-SNAPSHOT on DESKTOP-BHGM3HS with PID 21312 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\example-1.1.0-SNAPSHOT.jar started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target)
+2019-05-06 21:10:59.293 INFO  --- [SpringApplication.java:675][main] - No active profile set, falling back to default profiles: default
+2019-05-06 21:11:07.297 INFO  --- [StartupInfoLogger.java:59][main] - Started MyApplication in 8.874 seconds (JVM running for 10.329)
+2019-05-06 21:11:35.874 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-05-06 21:11:36.422 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-05-06 21:11:36.437 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:11:36.503 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:11:36.570 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:11:36.576 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:11:36.581 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:11:36.606 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-05-06 21:12:16.703 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:12:16.705 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123456(String)
+2019-05-06 21:12:16.727 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-05-06 21:12:16.729 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:12:16.731 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - ==> Parameters: user(String), 123456(String)
+2019-05-06 21:12:16.750 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-2] - <==      Total: 1
+2019-05-06 21:14:25.168 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:14:25.170 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:14:25.192 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-05-06 21:14:25.193 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:14:25.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:14:25.215 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-9] - <==      Total: 1
+2019-05-06 21:15:14.367 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-05-06 21:15:14.370 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:15:14.391 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1
+2019-05-06 21:15:14.393 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-05-06 21:15:14.394 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - ==> Parameters: company(String), 123456(String)
+2019-05-06 21:15:14.415 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-6] - <==      Total: 1

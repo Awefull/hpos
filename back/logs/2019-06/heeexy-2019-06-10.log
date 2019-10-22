@@ -1,0 +1,5 @@
+2019-06-10 16:16:38.266 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 6188 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-06-10 16:16:38.274 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-06-10 16:16:46.070 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.662 seconds (JVM running for 13.305)
+2019-06-10 16:29:31.539 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 3244 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-06-10 16:29:31.546 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default

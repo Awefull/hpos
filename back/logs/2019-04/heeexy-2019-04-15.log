@@ -1,0 +1,28 @@
+2019-04-15 21:18:43.956 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 20108 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-04-15 21:18:43.999 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-15 21:18:53.842 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 11.629 seconds (JVM running for 18.895)
+2019-04-15 21:19:09.908 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 43444 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-04-15 21:19:09.916 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-15 21:19:17.741 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.916 seconds (JVM running for 12.151)
+2019-04-15 21:24:40.380 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-04-15 21:24:48.141 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-04-15 21:24:48.151 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT username username, password password FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-04-15 21:24:48.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-15 21:24:48.262 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-15 21:24:48.267 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-04-15 21:24:48.269 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-15 21:24:48.287 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-15 21:29:17.310 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 40652 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-04-15 21:29:17.322 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-15 21:29:23.850 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 8.005 seconds (JVM running for 11.971)
+2019-04-15 21:34:38.870 INFO  --- [StartupInfoLogger.java:50][restartedMain] - Starting MyApplication on DESKTOP-BHGM3HS with PID 24192 (D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back\target\classes started by hasee in D:\projects\hr_and_project_outsourcing_platform\src\web\hpos\back)
+2019-04-15 21:34:38.879 INFO  --- [SpringApplication.java:675][restartedMain] - No active profile set, falling back to default profiles: default
+2019-04-15 21:34:45.607 INFO  --- [StartupInfoLogger.java:59][restartedMain] - Started MyApplication in 7.63 seconds (JVM running for 13.133)
+2019-04-15 21:39:31.712 INFO  --- [HikariDataSource.java:110][http-nio-8080-exec-1] - HikariPool-1 - Starting...
+2019-04-15 21:39:32.063 INFO  --- [HikariDataSource.java:123][http-nio-8080-exec-1] - HikariPool-1 - Start completed.
+2019-04-15 21:39:32.078 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT * FROM account WHERE delete_status = '1' and username = ? and password = ? ORDER BY username 
+2019-04-15 21:39:32.126 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-15 21:39:32.189 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1
+2019-04-15 21:39:32.195 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==>  Preparing: SELECT count(0) FROM account a WHERE a.delete_status = '1' and username = ? and password = ? 
+2019-04-15 21:39:32.196 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - ==> Parameters: company(String), 123456(String)
+2019-04-15 21:39:32.208 DEBUG --- [BaseJdbcLogger.java:159][http-nio-8080-exec-1] - <==      Total: 1

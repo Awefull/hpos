@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.AttachmentsDao">
+
+    <insert id="saveAttachments" parameterType="com.alibaba.fastjson.JSONObject" useGeneratedKeys="true" keyProperty="id">
+        insert into attachment(id,attachment_name, attachment_path, attachment_title) values(#{fileId},#{fileName}, #{filePath}, #{fileTitle})
+    </insert>
+
+    <select id="getFileNum" parameterType="com.alibaba.fastjson.JSONObject" resultType="int">
+        SELECT COUNT(1) FROM attachment
+    </select>
+
+    <insert id="addAttachmentIdToAdvertisementByFileName" parameterType="com.alibaba.fastjson.JSONObject">
+        insert into advertisement(unit_name, application_days, amount, attachment_id)
+        values(#{unitName}, #{applicationDays}, #{amount}, #{attachmentId})
+    </insert>
+
+    <select id="getResultsList" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+           a.unit_name unitName,
+           a.application_days applicationDays,
+           a.update_date updateDate,
+           a.audit_results auditResults
+        FROM
+            advertisement a
+        WHERE a.unit_name = #{unitName}
+    </select>
+</mapper>

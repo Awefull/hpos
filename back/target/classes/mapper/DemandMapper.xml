@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.DemandDao">
+
+    <insert id="releaseDemand" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO demand
+           (project_type,project_name, project_description, demand_type, project_cycle, project_budget, recruitment_role, project_demand,employer_name
+           )
+        VALUES
+            (#{projectType},#{projectName}, #{projectDescription}, #{demandType}, #{projectCycle}, #{projectBudget},#{recruitmentRole}, #{projectDemand},#{unitName})
+    </insert>
+
+    <update id="participationProjectSuccess" parameterType="com.alibaba.fastjson.JSONObject">
+        update demand
+           set apply_num = apply_num + 1
+        where project_name = #{projectName}
+     </update>
+
+</mapper>
